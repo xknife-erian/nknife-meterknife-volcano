@@ -92,6 +92,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.InstrumentMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.ExperimentManager", "Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj", "{91DA622B-2BA3-40C6-88D1-BF38D591F508}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.Data.DataProvider", "Modules\Data\NKnife.Module.Data.DataProvider\NKnife.Module.Data.DataProvider.csproj", "{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,6 +200,10 @@ Global
 		{91DA622B-2BA3-40C6-88D1-BF38D591F508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91DA622B-2BA3-40C6-88D1-BF38D591F508}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91DA622B-2BA3-40C6-88D1-BF38D591F508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -233,6 +239,7 @@ Global
 		{1F4C7339-9C5A-41FA-BC15-2C67945948B0} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
 		{BF5591DF-D11D-49DA-8EBA-982F77B12CE5} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
 		{91DA622B-2BA3-40C6-88D1-BF38D591F508} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
+		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F} = {97FF4408-6A9C-429A-AFBB-AC2CA21FF913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D98A22A-519B-463C-97E1-57C979C9754C}
