@@ -16,6 +16,10 @@
     <ProjectReference Include="..\..\Mercury\Common\RAY.Plugins\RAY.Plugins.csproj" />
     <ProjectReference Include="..\..\Mercury\Common\RAY.Windows\RAY.Windows.csproj" />
     <ProjectReference Include="..\..\Mercury\Features\LEIAO.Feature.PluginBrowser\LEIAO.Feature.PluginBrowser.csproj" />
+    <ProjectReference Include="..\..\Mercury\Modules\LEIAO.Module.Messenger\LEIAO.Module.Messenger.csproj" />
+    <ProjectReference Include="..\Features\NKnife.Feature.DutManager\NKnife.Feature.DutManager.csproj" />
+    <ProjectReference Include="..\Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj" />
+    <ProjectReference Include="..\Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj" />
     <ProjectReference Include="..\Features\NKnife.Feature.LogService\NKnife.Feature.LogService.csproj" />
     <ProjectReference Include="..\Features\NKnife.Feature.Welcome\NKnife.Feature.Welcome.csproj" />
     <ProjectReference Include="..\Modules\Managers\NKnife.Module.Manager.OptionManager\NKnife.Module.Manager.OptionManager.csproj" />
