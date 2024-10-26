@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Internal\App-Welcome-old.png" />
+    <None Remove="Internal\App-Welcome.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
+    <ProjectReference Include="..\..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Internal\App-Welcome.png" />
+  </ItemGroup>
+
+</Project>

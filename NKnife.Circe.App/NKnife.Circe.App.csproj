@@ -16,9 +16,11 @@
     <ProjectReference Include="..\..\Mercury\Common\RAY.Plugins\RAY.Plugins.csproj" />
     <ProjectReference Include="..\..\Mercury\Common\RAY.Windows\RAY.Windows.csproj" />
     <ProjectReference Include="..\..\Mercury\Features\LEIAO.Feature.PluginBrowser\LEIAO.Feature.PluginBrowser.csproj" />
+    <ProjectReference Include="..\Features\NKnife.Feature.Welcome\NKnife.Feature.Welcome.csproj" />
     <ProjectReference Include="..\Modules\Managers\NKnife.Module.Manager.OptionManager\NKnife.Module.Manager.OptionManager.csproj" />
     <ProjectReference Include="..\Modules\Managers\NKnife.Module.Manager.SurroundingManager\NKnife.Module.Manager.SurroundingManager.csproj" />
     <ProjectReference Include="..\Modules\NKnife.Module.Mock\NKnife.Module.Mock.csproj" />
+    <ProjectReference Include="..\Modules\Services\NKnife.Module.WelcomeService\NKnife.Module.WelcomeService.csproj" />
     <ProjectReference Include="..\Modules\UI\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj" />
     <ProjectReference Include="..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
   </ItemGroup>
