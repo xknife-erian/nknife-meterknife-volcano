@@ -7,7 +7,7 @@
 
 ## 关于 MeterKnife Third
   0. MeterKnife Circe 将为仪器仪表、工业设备等提供一个自动化测试测量、工业数据采集的平台；
-  1. MeterKnife Circe 可以分解成为自动化测试、数据采集、数据存储等模块；
+  1. MeterKnife Circe 可以分解成为自动化测试、数据采集、仪器驱动等模块；
   2. MeterKnife Circe 在Gitee与Github上保持开源；
   3. MeterKnife Circe 将遵循由常用到全部的迭代原则实现上述定义的功能；
   4. MeterKnife Circe 将实现仪器仪表常用的GPIB,TCPIP,串口,USB通讯手段的单独与复合使用；

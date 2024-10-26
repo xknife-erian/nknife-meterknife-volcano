@@ -78,6 +78,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.WelcomeServic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.Welcome", "Features\NKnife.Feature.Welcome\NKnife.Feature.Welcome.csproj", "{8BC4E327-1280-4025-BAB6-E9DB7EC28848}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.LogService", "Features\NKnife.Feature.LogService\NKnife.Feature.LogService.csproj", "{58B11524-DD1F-4405-8659-CE7ED74D093E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.LogService", "Modules\Services\NKnife.Module.LogService\NKnife.Module.LogService.csproj", "{5E13D5A6-5142-4EAC-BB88-FF254B345E7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +164,14 @@ Global
 		{8BC4E327-1280-4025-BAB6-E9DB7EC28848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BC4E327-1280-4025-BAB6-E9DB7EC28848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BC4E327-1280-4025-BAB6-E9DB7EC28848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B11524-DD1F-4405-8659-CE7ED74D093E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B11524-DD1F-4405-8659-CE7ED74D093E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B11524-DD1F-4405-8659-CE7ED74D093E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B11524-DD1F-4405-8659-CE7ED74D093E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E13D5A6-5142-4EAC-BB88-FF254B345E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E13D5A6-5142-4EAC-BB88-FF254B345E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E13D5A6-5142-4EAC-BB88-FF254B345E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E13D5A6-5142-4EAC-BB88-FF254B345E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +200,8 @@ Global
 		{580A001F-41DE-4C6A-BB7B-ED1ED7786497} = {0839C8C2-F3EA-4CF7-B310-799B378425D9}
 		{7D3C68AD-E4D5-4C3B-B7AF-57BEE6284840} = {580A001F-41DE-4C6A-BB7B-ED1ED7786497}
 		{8BC4E327-1280-4025-BAB6-E9DB7EC28848} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
+		{58B11524-DD1F-4405-8659-CE7ED74D093E} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
+		{5E13D5A6-5142-4EAC-BB88-FF254B345E7D} = {580A001F-41DE-4C6A-BB7B-ED1ED7786497}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D98A22A-519B-463C-97E1-57C979C9754C}
