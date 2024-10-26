@@ -1,20 +1,26 @@
-# MeterKnife **Third**
+# MeterKnife **Circe**
 
 - 本项目是一个开源软件项目。
 - 本项目开源协议是《木兰宽松许可证, 第2版》
 - 本项目开发语言：C#
-- Third: 这是第三次启动本项目研发
+- Circe: 项目内部代号，取自希腊神话中的女巫，象征着神秘、魔法、变化。
 
 ## 关于 MeterKnife Third
-  0. MeterKnife Third 将定义为一个自动化工业采集平台，仪器仪表采集将是其重要的一部份，但会更加深入的面向各种通讯手段的数据采集，例如485总线、Can总线、MBUS总线、RTU/DTU、Socket主从、IVI.Visa、自定义设备等等……。作者希望MeterKnife平台能为仪器仪表、传感器、自控集成、以及最终用户提供实时的物联网数据采集平台、生产运行监控平台、实时数据存储平台。
-  1. MeterKnife Third在Gitee与Github上保持开源，主要实现面向多仪器多通道多传感器的触发、采集与数据存储、图表显示、分析；
-  2. MeterKnife Third将遵循由常用到全部的迭代原则实现SCPI标准语法和命令的可视化快速使用；
-  3. MeterKnife Third将实现仪器仪表常用的GPIB,TCPIP,串口,USB通讯手段的单独与复合使用；
-  4. MeterKnife Third采用.Net6做为开发框架，界面采用.NET MAUI做为界面层框架；
-  5. MeterKnife Third将逐步支持NI PXI系统；
-  6. 定义为2024年10月完成Beta版研发；
+  0. MeterKnife Circe 将为仪器仪表、工业设备等提供一个自动化测试测量、工业数据采集的平台；
+  1. MeterKnife Circe 可以分解成为自动化测试、数据采集、数据存储等模块；
+  2. MeterKnife Circe 在Gitee与Github上保持开源；
+  3. MeterKnife Circe 将遵循由常用到全部的迭代原则实现上述定义的功能；
+  4. MeterKnife Circe 将实现仪器仪表常用的GPIB,TCPIP,串口,USB通讯手段的单独与复合使用；
+  5. MeterKnife Circe 采用.Net8做为开发框架，界面采用.NET MAUI做为界面层框架；
+  6. MeterKnife Circe 将逐步支持NI PXI系统；
+  7. 定义为2025年3月完成Beta版研发；
 
 ## 开发历史
+
+### 2024-10-26
+
+- 依旧忙；但已启动研发进程，与牛马工作同步进行；
+- 已完成最新的完全基于插件的桌面软件框架和最小化系统；
 
 ### 2024-4-29
 
