@@ -8,6 +8,7 @@ namespace NKnife.Feature.InstrumentManager
     public class InstrumentManagerFeature : BasePicoFeatures
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
+        private readonly ModuleContext _moduleContext = new ModuleContext();
 
         private IFeatureSet? _featureSet;
 
@@ -21,6 +22,7 @@ namespace NKnife.Feature.InstrumentManager
         /// <inheritdoc />
         public override Task<bool> StartServiceAsync()
         {
+            _moduleContext.Initialize();
             return Task.FromResult(true);
         }
 

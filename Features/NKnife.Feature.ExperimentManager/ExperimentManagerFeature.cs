@@ -8,12 +8,14 @@ namespace NKnife.Feature.ExperimentManager
     public class ExperimentManagerFeature : BasePicoFeatures
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
+        private readonly ModuleContext _moduleContext = new ModuleContext();
 
         private IFeatureSet? _featureSet;
 
         /// <inheritdoc />
         public override IFeatureSet GetFeatureSet()
         {
+            _moduleContext.Initialize();
             return _featureSet ??= new DefaultFeatureSet();
         }
 
