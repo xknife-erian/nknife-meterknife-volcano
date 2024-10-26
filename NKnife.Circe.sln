@@ -56,9 +56,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Manager.Surro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Managers", "Managers", "{3180208E-0D55-45C8-91E1-ADB903A66B07}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E2FDDAA3-2F81-48E9-AB51-B74EA4541EF3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.UI.MainWorkbench", "Modules\UI\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj", "{65D27A83-BD39-486C-9E6A-BC4F7086747A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.UI.MainWorkbench", "Modules\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj", "{65D27A83-BD39-486C-9E6A-BC4F7086747A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{D9A2269E-6E1C-4266-9E12-31CFEF6B7B72}"
 EndProject
@@ -86,13 +84,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Module.Messenger", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{97FF4408-6A9C-429A-AFBB-AC2CA21FF913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.DutManager", "Features\NKnife.Feature.DutManager\NKnife.Feature.DutManager.csproj", "{1F4C7339-9C5A-41FA-BC15-2C67945948B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.DutManager", "Features\NKnife.Feature.DutManager\NKnife.Feature.DutManager.csproj", "{1F4C7339-9C5A-41FA-BC15-2C67945948B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.InstrumentManager", "Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj", "{BF5591DF-D11D-49DA-8EBA-982F77B12CE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.InstrumentManager", "Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj", "{BF5591DF-D11D-49DA-8EBA-982F77B12CE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.ExperimentManager", "Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj", "{91DA622B-2BA3-40C6-88D1-BF38D591F508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.ExperimentManager", "Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj", "{91DA622B-2BA3-40C6-88D1-BF38D591F508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.Data.DataProvider", "Modules\Data\NKnife.Module.Data.DataProvider\NKnife.Module.Data.DataProvider.csproj", "{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.DataProvider", "Modules\Data\NKnife.Module.Data.DataProvider\NKnife.Module.Data.DataProvider.csproj", "{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,8 +219,7 @@ Global
 		{D2985C1F-3FC9-405D-828D-F93CA5A63400} = {DF8D2AF3-86D7-4C8D-A420-034AEEA4DB27}
 		{47EA2163-1F4A-4144-B4F6-9E0AA22E0696} = {3180208E-0D55-45C8-91E1-ADB903A66B07}
 		{3180208E-0D55-45C8-91E1-ADB903A66B07} = {0839C8C2-F3EA-4CF7-B310-799B378425D9}
-		{E2FDDAA3-2F81-48E9-AB51-B74EA4541EF3} = {0839C8C2-F3EA-4CF7-B310-799B378425D9}
-		{65D27A83-BD39-486C-9E6A-BC4F7086747A} = {E2FDDAA3-2F81-48E9-AB51-B74EA4541EF3}
+		{65D27A83-BD39-486C-9E6A-BC4F7086747A} = {0839C8C2-F3EA-4CF7-B310-799B378425D9}
 		{D9A2269E-6E1C-4266-9E12-31CFEF6B7B72} = {0839C8C2-F3EA-4CF7-B310-799B378425D9}
 		{DF8D2AF3-86D7-4C8D-A420-034AEEA4DB27} = {380C48BA-F6FC-4B61-93E8-0C187442C095}
 		{2B9DEE8E-55D6-451E-BDA1-4CE84F36B2C4} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}

@@ -27,7 +27,7 @@
     <ProjectReference Include="..\Modules\NKnife.Module.Mock\NKnife.Module.Mock.csproj" />
     <ProjectReference Include="..\Modules\Services\NKnife.Module.LogService\NKnife.Module.LogService.csproj" />
     <ProjectReference Include="..\Modules\Services\NKnife.Module.WelcomeService\NKnife.Module.WelcomeService.csproj" />
-    <ProjectReference Include="..\Modules\UI\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj" />
+    <ProjectReference Include="..\Modules\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj" />
     <ProjectReference Include="..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
   </ItemGroup>
 

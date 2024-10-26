@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Mercury\Common\RAY.Common\RAY.Common.csproj" />
-    <ProjectReference Include="..\..\..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
+    <ProjectReference Include="..\..\..\Mercury\Common\RAY.Common\RAY.Common.csproj" />
+    <ProjectReference Include="..\..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
   </ItemGroup>
 
 </Project>
