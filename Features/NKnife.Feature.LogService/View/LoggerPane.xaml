@@ -6,6 +6,7 @@
              xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:vm="clr-namespace:NKnife.Feature.LogService.ViewModel"
              xmlns:view="clr-namespace:NKnife.Feature.LogService.View"
+             xmlns:uiAddins="clr-namespace:RAY.Plugins.WPF.UIAddins;assembly=RAY.Plugins.WPF"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance {x:Type vm:LoggerPaneVm}}"
              d:DesignHeight="220" d:DesignWidth="800">
@@ -13,6 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="26" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0">
             <ToolBar x:Name="_ToolBar_" DockPanel.Dock="Top" OverflowMode="AsNeeded">
@@ -35,6 +37,7 @@
                         <CheckBox Content="Fatal" IsChecked="{Binding IsDisplayFatal, Mode=TwoWay}" />
                     </MenuItem>
                 </Menu>
+                <uiAddins:UIAddinHost AddinHostName="LoggerPanelToolBar" />
             </ToolBar>
             <TextBox AcceptsReturn="True" />
         </DockPanel>
@@ -51,5 +54,8 @@
                 </DataTemplate>
             </TabControl.ContentTemplate>
         </TabControl>
+        <DockPanel Grid.Row="2">
+            <uiAddins:UIAddinHost AddinHostName="LoggerPanelBottom" />
+        </DockPanel>
     </Grid>
 </UserControl>
