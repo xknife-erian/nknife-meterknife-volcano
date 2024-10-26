@@ -1,16 +1,14 @@
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MvvmDialogs;
 using NLog;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Windows.Input;
-using LEIAO.Mercury.Extensions;
 using RAY.Common;
 using RAY.Library.Collection;
-using RAY.Library;
 
-namespace LEIAO.Feature.LogService.ViewModel
+namespace NKnife.Feature.LogService.ViewModel
 {
     public class LoggerListViewVm : ObservableObject
     {

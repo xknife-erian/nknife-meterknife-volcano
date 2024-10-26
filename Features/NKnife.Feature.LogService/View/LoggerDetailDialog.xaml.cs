@@ -1,4 +1,4 @@
-﻿namespace LEIAO.Feature.LogService.View;
+﻿namespace NKnife.Feature.LogService.View;
 
 /// <summary>
 ///     LoggerDetailDialog.xaml 的交互逻辑

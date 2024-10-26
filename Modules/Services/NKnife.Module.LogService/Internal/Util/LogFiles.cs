@@ -1,8 +1,8 @@
-﻿using RAY.Library.Utils;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
+using RAY.Library.Utils;
 
-namespace LEIAO.Module.LogService.Internal.Util
+namespace NKnife.Module.LogService.Internal.Util
 {
     internal class LogFiles
     {

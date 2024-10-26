@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace LEIAO.Feature.LogService.View.Converter
+namespace NKnife.Feature.LogService.View.Converter
 {
     public class TimeStamp2StringConverter : IValueConverter
     {

@@ -1,11 +1,11 @@
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 using MvvmDialogs;
 using NLog;
 using RAY.Common.Services.LogService;
 using RAY.Windows.Common;
-using System.Windows.Input;
 
-namespace LEIAO.Feature.LogService.ViewModel
+namespace NKnife.Feature.LogService.ViewModel
 {
     public class LoggerPaneVm : BaseViewModel
     {
@@ -163,7 +163,6 @@ namespace LEIAO.Feature.LogService.ViewModel
             get => _isDisplayFatal;
             set => SetProperty(ref _isDisplayFatal, value);
         }
-
 
         #region AutoWidth
         private double _viewWidth = -1;

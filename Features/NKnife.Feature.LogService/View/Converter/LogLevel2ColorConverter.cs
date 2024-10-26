@@ -4,7 +4,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using NLog;
 
-namespace LEIAO.Feature.LogService.View.Converter
+namespace NKnife.Feature.LogService.View.Converter
 {
     public class LogLevel2ColorConverter : IValueConverter
     {

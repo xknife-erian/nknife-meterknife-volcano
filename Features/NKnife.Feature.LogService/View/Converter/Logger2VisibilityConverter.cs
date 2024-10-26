@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Data;
 using NLog;
 
-namespace LEIAO.Feature.LogService.View.Converter
+namespace NKnife.Feature.LogService.View.Converter
 {
     public class Logger2VisibilityConverter : IMultiValueConverter
     {

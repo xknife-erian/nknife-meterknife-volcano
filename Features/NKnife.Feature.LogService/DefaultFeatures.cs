@@ -1,20 +1,19 @@
-﻿using System.Security.Cryptography;
+﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using LEIAO.Feature.LogService.View;
-using LEIAO.Feature.LogService.ViewModel;
+using NKnife.Feature.LogService.View;
+using NKnife.Feature.LogService.ViewModel;
+using NLog;
+using RAY.Common;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Services.LogService;
-using System.Windows.Input;
-using NLog;
-using RAY.Common;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
 using RAY.Plugins.WPF.Ribbons;
 
-namespace LEIAO.Feature.LogService
+namespace NKnife.Feature.LogService
 {
     public class DefaultFeatures : BasePicoFeatures, ISupportUsingModule
     {

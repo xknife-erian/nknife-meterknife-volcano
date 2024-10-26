@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace LEIAO.Feature.LogService.View
+namespace NKnife.Feature.LogService.View
 {
     /// <summary>
     ///     LoggerListView.xaml 的交互逻辑

@@ -2,7 +2,7 @@
 using System.Windows.Data;
 using Xceed.Wpf.Toolkit;
 
-namespace LEIAO.Feature.LogService.View.Converter
+namespace NKnife.Feature.LogService.View.Converter
 {
     public class Bool2WindowStateConverter : IValueConverter
     {

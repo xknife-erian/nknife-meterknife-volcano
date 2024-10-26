@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NLog;
 using NLog.Config;
-using NLog;
 using NLog.Targets;
 using NLog.Targets.Wrappers;
 
-namespace LEIAO.Module.LogService.Internal.Util
+namespace NKnife.Module.LogService.Internal.Util
 {
     internal class TargetHelper
     {

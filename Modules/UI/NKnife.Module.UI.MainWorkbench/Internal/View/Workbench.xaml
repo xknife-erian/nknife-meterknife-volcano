@@ -14,7 +14,7 @@
                      d:DataContext="{d:DesignInstance viewModels:WorkbenchVm}"
                      md:DialogServiceViews.IsRegistered="True"
                      WindowStartupLocation="CenterScreen"
-                     Height="800" Width="1200">
+                     Height="1000" Width="1600">
     <fluent:RibbonWindow.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityCvt" />
     </fluent:RibbonWindow.Resources> 

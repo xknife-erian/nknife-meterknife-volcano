@@ -4,7 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using MvvmDialogs;
 using NLog;
 
-namespace LEIAO.Feature.LogService.ViewModel
+namespace NKnife.Feature.LogService.ViewModel
 {
     public class LoggerDetailDialogVm : ObservableObject, IModalDialogViewModel
     {
