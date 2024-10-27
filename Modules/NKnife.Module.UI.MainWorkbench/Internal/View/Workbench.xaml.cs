@@ -1,4 +1,5 @@
 ﻿using RAY.Common;
+using RAY.Common.UI;
 
 namespace NKnife.Module.UI.MainWorkbench.Internal.View
 {

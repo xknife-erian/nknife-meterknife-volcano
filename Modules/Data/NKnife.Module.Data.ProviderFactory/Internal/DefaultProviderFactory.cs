@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RAY.Common.Provider;
+﻿using RAY.Common.Provider;
 
-namespace NKnife.Module.Data.DataProvider.Internal
+namespace NKnife.Module.Data.ProviderFactory.Internal
 {
     internal class DefaultProviderFactory : IProviderFactory
     {

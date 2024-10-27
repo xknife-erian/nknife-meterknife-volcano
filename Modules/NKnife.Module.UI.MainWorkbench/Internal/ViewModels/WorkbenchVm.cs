@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using MvvmDialogs;
 using NKnife.Module.UI.MainWorkbench.Internal.ViewModels.Container;
 using RAY.Common;
+using RAY.Common.UI;
 
 namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels
 {

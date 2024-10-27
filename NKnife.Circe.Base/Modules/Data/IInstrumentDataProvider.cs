@@ -5,6 +5,7 @@ namespace NKnife.Circe.Base.Modules.Data
 {
     public interface IInstrumentDataProvider : IFileDataProvider
     {
+        /*
         #region Workstation Interfaces
         IProviderResult AddWorkstation(IWorkstation entity);
 
@@ -171,6 +172,7 @@ namespace NKnife.Circe.Base.Modules.Data
         IProviderResult DeleteFunctionBoard(string wsUniqueId, string boardId);
         IProviderResult UpdateFunctionBoard(string wsUniqueId, IFunctionBoard entity);
         bool IsFunctionBoardAliasAvailable(string wsUniqueId, IFunctionBoard entity);
+        */
 
     }
 }

@@ -1,11 +1,9 @@
-﻿using System.Collections.Immutable;
-using System.Collections.Specialized;
-using NKnife.Circe.Base;
-using NKnife.Module.LogService.Internal.Util;
+﻿using NKnife.Circe.Base;
 using NLog;
-using RAY.Common;
 using RAY.Common.Authentication;
+using RAY.Common.NLogConf;
 using RAY.Common.Services.LogService;
+using System.Collections.Immutable;
 
 namespace NKnife.Module.LogService.Internal
 {

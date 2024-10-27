@@ -8,6 +8,7 @@ using RAY.Library;
 using RAY.Plugins.WPF.Common;
 using RAY.Plugins.WPF.Ribbons;
 using System.Windows.Input;
+using RAY.Common.UI;
 
 namespace NKnife.Feature.DutManager.Internal
 {

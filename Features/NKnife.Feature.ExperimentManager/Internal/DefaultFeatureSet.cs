@@ -4,6 +4,7 @@ using NLog;
 using RAY.Common;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
 using RAY.Plugins.WPF.Ribbons;

@@ -6,6 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using MvvmDialogs;
 using NLog;
 using RAY.Common;
+using RAY.Common.NLogConf;
 using RAY.Library.Collection;
 
 namespace NKnife.Feature.LogService.ViewModel

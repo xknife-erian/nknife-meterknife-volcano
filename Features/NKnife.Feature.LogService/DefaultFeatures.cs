@@ -9,6 +9,7 @@ using RAY.Common.Enums;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Services.LogService;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
 using RAY.Plugins.WPF.Ribbons;

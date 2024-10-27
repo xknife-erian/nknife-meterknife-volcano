@@ -1,8 +1,9 @@
-﻿using NLog;
-using RAY.Common;
+﻿using NKnife.Module.UI.MainWorkbench.Internal.View;
+using NLog;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Plugin.Modules;
+using RAY.Common.UI;
 using RAY.Plugins.WPF;
 
 namespace NKnife.Module.UI.MainWorkbench
@@ -29,7 +30,7 @@ namespace NKnife.Module.UI.MainWorkbench
                     foreach (var categoryPoint in menus)
                         workbenchVm.MenusVm.CategoryMenus.Add(categoryPoint);
                     
-                    _workbench ??= new Internal.View.Workbench() { DataContext = workbenchVm };
+                    _workbench ??= new Workbench() { DataContext = workbenchVm };
                 }
 
                 return _workbench;

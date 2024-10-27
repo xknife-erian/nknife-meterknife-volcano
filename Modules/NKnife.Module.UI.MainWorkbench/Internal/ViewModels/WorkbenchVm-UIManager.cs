@@ -3,6 +3,7 @@ using MvvmDialogs;
 using MvvmDialogs.FrameworkDialogs.OpenFile;
 using RAY.Common;
 using RAY.Common.Enums;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Windows.Common;
 

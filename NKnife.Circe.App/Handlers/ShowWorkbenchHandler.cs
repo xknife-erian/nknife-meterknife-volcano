@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using NLog;
-using RAY.Common;
 using RAY.Common.Plugin.Manager;
+using RAY.Common.UI;
 using RAY.Windows;
 using RAY.Windows.Common;
 using System.ComponentModel;

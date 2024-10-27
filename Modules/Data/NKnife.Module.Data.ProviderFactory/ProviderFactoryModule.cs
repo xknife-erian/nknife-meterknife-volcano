@@ -1,11 +1,11 @@
-﻿using NKnife.Module.Data.DataProvider.Internal;
+﻿using NKnife.Module.Data.ProviderFactory.Internal;
 using NLog;
 using RAY.Common.Plugin.Modules;
 using RAY.Common.Provider;
 
-namespace NKnife.Module.Data.DataProvider
+namespace NKnife.Module.Data.ProviderFactory
 {
-    public class DataProviderModule : BasePicoModule<IProviderFactory>
+    public class ProviderFactoryModule : BasePicoModule<IProviderFactory>
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ModuleContext _moduleContext = new();

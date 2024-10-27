@@ -90,9 +90,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.InstrumentMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.ExperimentManager", "Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj", "{91DA622B-2BA3-40C6-88D1-BF38D591F508}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.DataProvider", "Modules\Data\NKnife.Module.Data.DataProvider\NKnife.Module.Data.DataProvider.csproj", "{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.ProviderFactory", "Modules\Data\NKnife.Module.Data.ProviderFactory\NKnife.Module.Data.ProviderFactory.csproj", "{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Circe.Entities", "NKnife.Circe.Entities\NKnife.Circe.Entities.csproj", "{439481DE-88DE-4FED-BE77-A73A9D25C0F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Circe.Entities", "NKnife.Circe.Entities\NKnife.Circe.Entities.csproj", "{439481DE-88DE-4FED-BE77-A73A9D25C0F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.Repository", "Modules\Data\NKnife.Module.Data.Repository\NKnife.Module.Data.Repository.csproj", "{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -208,6 +210,10 @@ Global
 		{439481DE-88DE-4FED-BE77-A73A9D25C0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{439481DE-88DE-4FED-BE77-A73A9D25C0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{439481DE-88DE-4FED-BE77-A73A9D25C0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -243,6 +249,7 @@ Global
 		{BF5591DF-D11D-49DA-8EBA-982F77B12CE5} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
 		{91DA622B-2BA3-40C6-88D1-BF38D591F508} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
 		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F} = {97FF4408-6A9C-429A-AFBB-AC2CA21FF913}
+		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4} = {97FF4408-6A9C-429A-AFBB-AC2CA21FF913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D98A22A-519B-463C-97E1-57C979C9754C}

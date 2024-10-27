@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using RAY.Common;
+using RAY.Common.UI;
 using RAY.Plugins.WPF.Common;
 
 namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels.Container

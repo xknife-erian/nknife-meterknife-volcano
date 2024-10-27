@@ -3,6 +3,7 @@ using System.Windows.Input;
 using RAY.Common;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
 using WelcomeWindow = NKnife.Feature.Welcome.Internal.Welcome;
