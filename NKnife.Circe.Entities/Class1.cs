@@ -1,4 +1,4 @@
-﻿namespace NKnife.Circe.Common
+﻿namespace NKnife.Circe.Entities
 {
     public class Class1
     {
