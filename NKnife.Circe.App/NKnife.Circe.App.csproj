@@ -21,7 +21,10 @@
     <ProjectReference Include="..\Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj" />
     <ProjectReference Include="..\Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj" />
     <ProjectReference Include="..\Features\NKnife.Feature.LogService\NKnife.Feature.LogService.csproj" />
+    <ProjectReference Include="..\Features\NKnife.Feature.OptionManager\NKnife.Feature.OptionManager.csproj" />
     <ProjectReference Include="..\Features\NKnife.Feature.Welcome\NKnife.Feature.Welcome.csproj" />
+    <ProjectReference Include="..\Modules\Data\NKnife.Module.Data.ProviderFactory\NKnife.Module.Data.ProviderFactory.csproj" />
+    <ProjectReference Include="..\Modules\Data\NKnife.Module.Data.Repository\NKnife.Module.Data.Repository.csproj" />
     <ProjectReference Include="..\Modules\Managers\NKnife.Module.Manager.OptionManager\NKnife.Module.Manager.OptionManager.csproj" />
     <ProjectReference Include="..\Modules\Managers\NKnife.Module.Manager.SurroundingManager\NKnife.Module.Manager.SurroundingManager.csproj" />
     <ProjectReference Include="..\Modules\NKnife.Module.Mock\NKnife.Module.Mock.csproj" />
@@ -29,6 +32,7 @@
     <ProjectReference Include="..\Modules\Services\NKnife.Module.WelcomeService\NKnife.Module.WelcomeService.csproj" />
     <ProjectReference Include="..\Modules\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj" />
     <ProjectReference Include="..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
+    <ProjectReference Include="..\NKnife.Circe.Entities\NKnife.Circe.Entities.csproj" />
   </ItemGroup>
 
 </Project>
