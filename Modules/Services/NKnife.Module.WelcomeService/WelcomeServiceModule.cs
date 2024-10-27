@@ -1,4 +1,4 @@
-﻿using NKnife.Circe.Base;
+﻿using NKnife.Circe.Base.Modules;
 using NKnife.Module.WelcomeService.Internal;
 using RAY.Common.Plugin.Modules;
 

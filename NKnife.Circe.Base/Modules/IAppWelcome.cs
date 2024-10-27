@@ -1,4 +1,4 @@
-﻿namespace NKnife.Circe.Base
+﻿namespace NKnife.Circe.Base.Modules
 {
     ///<summary>
     /// 应用程序的欢迎工作流程
@@ -21,12 +21,12 @@
         public string StartupMessage { get; set; }
 
         void StartPauseWelcomeWork();
-        
+
         /// <summary>
         /// 当暂停欢迎工作开始时
         /// </summary>
         event EventHandler PauseWelcomeStarted;
-        
+
         bool IsLoginSuccess { get; set; }
     }
 }

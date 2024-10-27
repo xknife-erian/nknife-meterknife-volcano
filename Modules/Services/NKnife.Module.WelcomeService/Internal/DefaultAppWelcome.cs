@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using NKnife.Circe.Base;
+using NKnife.Circe.Base.Modules;
 
 namespace NKnife.Module.WelcomeService.Internal
 {
