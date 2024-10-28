@@ -8,7 +8,7 @@
         public AppException(string message) : this(Exceptions.ErrorNumber.TBD, string.Empty, null) { }
 
         /// <summary>
-        ///     雷奥应用软件异常编号
+        ///     应用软件异常编号
         /// </summary>
         public int ErrorNumber { get; set; } = number;
 

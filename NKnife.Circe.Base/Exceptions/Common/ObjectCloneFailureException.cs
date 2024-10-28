@@ -2,7 +2,7 @@
 
 namespace NKnife.Circe.Base.Exceptions.Common
 {
-    public class ObjectCloneFailureException : AppException
+    public class ObjectCloneFailureException : AppInternalException
     {
         /// <inheritdoc />
         public ObjectCloneFailureException(int number, string message, Exception? innerExcept) : base(number, message, innerExcept) { }
