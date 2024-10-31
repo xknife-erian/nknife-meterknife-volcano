@@ -96,7 +96,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Circe.Entities", "NK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.Repository", "Modules\Data\NKnife.Module.Data.Repository\NKnife.Module.Data.Repository.csproj", "{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.OptionManager", "Features\NKnife.Feature.OptionManager\NKnife.Feature.OptionManager.csproj", "{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.OptionManager", "Features\NKnife.Feature.OptionManager\NKnife.Feature.OptionManager.csproj", "{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Addin.PerformanceDetector", "..\Mercury\Addins\LEIAO.Addin.PerformanceDetector\LEIAO.Addin.PerformanceDetector.csproj", "{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Addin.StatusBasicInfo", "..\Mercury\Addins\LEIAO.Addin.StatusBasicInfo\LEIAO.Addin.StatusBasicInfo.csproj", "{72CDB098-BB35-407E-86FE-3043C2CFC0CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -220,6 +224,14 @@ Global
 		{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72CDB098-BB35-407E-86FE-3043C2CFC0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72CDB098-BB35-407E-86FE-3043C2CFC0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72CDB098-BB35-407E-86FE-3043C2CFC0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72CDB098-BB35-407E-86FE-3043C2CFC0CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -257,6 +269,8 @@ Global
 		{6B14DC7E-3985-4ECB-9ACE-D4BC9878BF2F} = {97FF4408-6A9C-429A-AFBB-AC2CA21FF913}
 		{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4} = {97FF4408-6A9C-429A-AFBB-AC2CA21FF913}
 		{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84} = {B63E9AE2-E324-4E5B-810A-88FB42FF9D78}
+		{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E} = {95392B2E-4245-4B01-BCC4-A246435AB118}
+		{72CDB098-BB35-407E-86FE-3043C2CFC0CE} = {95392B2E-4245-4B01-BCC4-A246435AB118}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D98A22A-519B-463C-97E1-57C979C9754C}

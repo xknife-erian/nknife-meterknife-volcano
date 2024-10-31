@@ -1,26 +1,29 @@
 ﻿using System.Reflection;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels.Container
 {
     public class StatusStripVm : ObservableRecipient
     {
-        private string _infoTip = string.Empty;
+        private string _infoMessage = string.Empty;
 
-        public string InformationTip
+        public string InformationMessage
         {
-            get => _infoTip;
-            set => SetProperty(ref _infoTip, value);
+            get => _infoMessage;
+            set => SetProperty(ref _infoMessage, value);
         }
 
-        public bool HasInformationMessage => !string.IsNullOrEmpty(_infoTip);
+        public bool HasInformationMessage => !string.IsNullOrEmpty(_infoMessage);
 
-        public void Show(string infomation)
+        public void Show(string informationMessage)
         {
-            InformationTip = infomation;
+            InformationMessage = informationMessage;
         }
 
-        public string? AppVersion => Assembly.GetEntryAssembly()?.GetName()?.Version?.ToString();
-
+        public ICommand ViewLoadedCommand => new RelayCommand(() =>
+        {
+        });
     }
 }

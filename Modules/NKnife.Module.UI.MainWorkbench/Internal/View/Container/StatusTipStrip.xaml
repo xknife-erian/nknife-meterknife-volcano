@@ -6,41 +6,30 @@
              xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:windows="clr-namespace:RAY.Windows;assembly=RAY.Windows"
              xmlns:container="clr-namespace:NKnife.Module.UI.MainWorkbench.Internal.ViewModels.Container"
+             xmlns:uiAddins="clr-namespace:RAY.Plugins.WPF.UIAddins;assembly=RAY.Plugins.WPF"
              mc:Ignorable="d" 
              d:DesignWidth="800" Height="40"
              d:DataContext="{d:DesignInstance {x:Type container:StatusStripVm}}">
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding ViewLoadedCommand}" />
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="B2V" />
     </UserControl.Resources>
     <Border Background="LightGray">
         <DockPanel>
-            <Rectangle Width="5" />
-            <ItemsControl DockPanel.Dock="Left">
-                <!-- ItemsSource="{Binding ComlinkStateBoxVms}"> -->
-                <ItemsControl.Resources>
-                    <Style TargetType="windows:Led">
-                        <Setter Property="Margin" Value="4" />
-                    </Style>
-                </ItemsControl.Resources>
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <!-- <ctr:ComlinkStateBox Margin="2,-1,2,0" /> -->
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-
-            <Border DockPanel.Dock="Left">
-                <TextBlock Text="{Binding InformationTip}"
+            <uiAddins:UIAddinHost DockPanel.Dock="Left" AddinHostName="StatusStripLeftmost" />
+            <Border DockPanel.Dock="Left"
+                    Visibility="{Binding HasInformationMessage, Converter={StaticResource B2V}}">
+                <TextBlock Text="{Binding InformationMessage}"
                            VerticalAlignment="Center" Margin="6 0"/>
             </Border>
-            <TextBlock DockPanel.Dock="Right" Margin="5,0" VerticalAlignment="Center"
-                       Text="{Binding AppVersion, Mode=OneTime}" />
-            <Rectangle />
+            <uiAddins:UIAddinHost DockPanel.Dock="Left" AddinHostName="StatusStripLeft" />
+            <uiAddins:UIAddinHost DockPanel.Dock="Right" AddinHostName="StatusStripRightmost" />
+            <uiAddins:UIAddinHost DockPanel.Dock="Right" AddinHostName="StatusStripRight" />
+            <uiAddins:UIAddinHost AddinHostName="StatusStripCenter" />
         </DockPanel>
     </Border>
 </UserControl>

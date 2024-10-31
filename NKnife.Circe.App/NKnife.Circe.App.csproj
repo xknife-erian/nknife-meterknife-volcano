@@ -10,6 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\Mercury\Addins\LEIAO.Addin.PerformanceDetector\LEIAO.Addin.PerformanceDetector.csproj" />
+        <ProjectReference Include="..\..\Mercury\Addins\LEIAO.Addin.StatusBasicInfo\LEIAO.Addin.StatusBasicInfo.csproj" />
         <ProjectReference Include="..\..\Mercury\Common\RAY.Commlink\RAY.Commlink.csproj" />
         <ProjectReference Include="..\..\Mercury\Common\RAY.Common\RAY.Common.csproj" />
         <ProjectReference Include="..\..\Mercury\Common\RAY.Library\RAY.Library.csproj" />
