@@ -16,6 +16,7 @@
         <!--描述出现在菜单栏位置的Menu-->
         <Category Id="F552B761-16ED-4661-928C-5B1B6AECF8F5"
 				  Header="开始">
+            <Order OrderType="Head"/>
             <Group Id="18F923AE-54AA-4B77-9C52-ACDD4B76AC82"
                    Header="数据">
                 <Focal Id="135601E9-B444-402C-AC66-BC9AC77BAB71"
