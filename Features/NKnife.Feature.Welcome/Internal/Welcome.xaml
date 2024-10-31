@@ -25,21 +25,21 @@
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="6*" />
                 </Grid.ColumnDefinitions>
-                <DockPanel Grid.Column="0" Margin="30,0,0,0">
+                <DockPanel Grid.Column="0" Margin="50,0,0,0">
                     <TextBlock Height="Auto" Width="Auto"
                                DockPanel.Dock="Top"
                                HorizontalAlignment="Left" VerticalAlignment="Center"
                                FontFamily="Times New Roman"
-                               FontSize="70" Foreground="#333" Padding="0,0,0,5"
+                               FontSize="70" Foreground="#EEE" Padding="0,0,0,5"
                                Text="捷录仪控" FontStyle="Normal" FontStretch="Normal"
                                LineStackingStrategy="MaxHeight" TextTrimming="None" FontWeight="Bold">
                         <TextBlock.Effect>
                             <DropShadowEffect
-                                ShadowDepth="4"
-                                Direction="330"
-                                Color="#FFF"
+                                ShadowDepth="2"
+                                Direction="300"
+                                Color="GreenYellow"
                                 Opacity="0.6"
-                                BlurRadius="8" RenderingBias="Quality" />
+                                BlurRadius="12" RenderingBias="Quality" />
                         </TextBlock.Effect>
                     </TextBlock>
                     <Rectangle Height="10" DockPanel.Dock="Top" />
@@ -56,7 +56,7 @@
             </Grid>
             <Border Grid.Row="2">
                 <TextBlock x:Name="_StartupLogTextBlock_"
-                           Margin="30,5"
+                           Margin="50,5"
                            Foreground="LightGray"
                            Text="StartupLog" />
             </Border>
