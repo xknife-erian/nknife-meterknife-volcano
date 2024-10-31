@@ -28,7 +28,17 @@ namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels
         {
             WorkbenchInitialized?.Invoke(this, EventArgs.Empty);
         });
-        
+
+        public ICommand WorkbenchClosingCmd => new RelayCommand(() =>
+        {
+            WorkbenchClosing?.Invoke(this, EventArgs.Empty);
+        });
+        public ICommand WorkbenchClosedCmd => new RelayCommand(() =>
+        {
+            WorkbenchClosed?.Invoke(this, EventArgs.Empty);
+        });
+
+
         public bool IsBusy
         {
             get => _isBusy;

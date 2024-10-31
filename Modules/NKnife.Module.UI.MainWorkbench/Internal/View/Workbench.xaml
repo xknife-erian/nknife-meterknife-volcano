@@ -24,6 +24,12 @@
         </b:EventTrigger>
         <b:EventTrigger EventName="ContentRendered">
             <b:InvokeCommandAction Command="{Binding WorkbenchInitializedCmd}" />
+        </b:EventTrigger>   
+        <b:EventTrigger EventName="Closing">
+            <b:InvokeCommandAction Command="{Binding WorkbenchClosingCmd}" />
+        </b:EventTrigger>    
+        <b:EventTrigger EventName="Closed">
+            <b:InvokeCommandAction Command="{Binding WorkbenchClosedCmd}" />
         </b:EventTrigger>
     </b:Interaction.Triggers>
     <Border>

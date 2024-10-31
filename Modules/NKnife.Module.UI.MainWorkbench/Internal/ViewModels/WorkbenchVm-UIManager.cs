@@ -18,7 +18,7 @@ namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels
         public event EventHandler<EventArgs>? WorkbenchInitialized;
 
         /// <inheritdoc />
-        public event EventHandler<CancelEventArgs>? WorkbenchClosing;
+        public event EventHandler<EventArgs>? WorkbenchClosing;
 
         /// <inheritdoc />
         public event EventHandler<EventArgs>? WorkbenchClosed;

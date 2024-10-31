@@ -33,6 +33,10 @@ namespace NKnife.Feature.Welcome
                 await Task.Delay(15000);
                 _welcomeWindow?.Close();
             };
+            _featureSet.MainWorkbenchClosing += async (_, e) =>
+            {
+                _welcomeWindow?.Close();
+            };
         }
 
         /// <inheritdoc />
@@ -82,7 +86,9 @@ namespace NKnife.Feature.Welcome
             public override void Inject(IUIManager uiManager)
             {
                 uiManager.WorkbenchInitializing += (_, _) => { MainWorkbenchLoading?.Invoke(this, EventArgs.Empty); };
-                uiManager.WorkbenchInitialized += (_, _) => { MainWorkbenchLoaded?.Invoke(this, EventArgs.Empty); };
+                uiManager.WorkbenchInitialized  += (_, _) => { MainWorkbenchLoaded?.Invoke(this, EventArgs.Empty); };
+                uiManager.WorkbenchClosing      += (_, _) => { MainWorkbenchClosing?.Invoke(this, EventArgs.Empty); };
+                uiManager.WorkbenchClosed       += (_, _) => { MainWorkbenchClosed?.Invoke(this, EventArgs.Empty); };
             }
 
             /// <inheritdoc />
@@ -99,6 +105,8 @@ namespace NKnife.Feature.Welcome
 
             public event EventHandler? MainWorkbenchLoaded;
             public event EventHandler? MainWorkbenchLoading;
+            public event EventHandler? MainWorkbenchClosing;
+            public event EventHandler? MainWorkbenchClosed;
         }
     }
 }
