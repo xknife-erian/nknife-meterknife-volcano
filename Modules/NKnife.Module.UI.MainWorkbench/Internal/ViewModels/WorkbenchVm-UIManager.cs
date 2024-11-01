@@ -45,6 +45,18 @@ namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels
         }
 
         /// <inheritdoc />
+        public void ShowStandaloneWindow(INotifyPropertyChanged viewModel, bool isModal = false)
+        {
+            if (viewModel is IModalDialogViewModel modalDialogViewModel)
+            {
+                if (!isModal)
+                    _dialogService.Show(this, modalDialogViewModel);
+                else
+                    _dialogService.ShowDialog(this, modalDialogViewModel);
+            }
+        }
+
+        /// <inheritdoc />
         public void ShowErrorMessage(string message, int fade)
         {
             ErrorStripVm.Show(message);
