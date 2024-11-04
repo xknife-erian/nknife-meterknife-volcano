@@ -6,7 +6,7 @@ namespace NKnife.Circe.Entities
 {
     public class Experiment : IExperiment
     {
-        #region Implementation of IVersioned
+        #region Implementation of IVersionedRecord
         /// <inheritdoc />
         public int Version { get; set; }
         #endregion
