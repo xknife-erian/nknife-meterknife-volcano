@@ -4,13 +4,14 @@ using System.Numerics;
 using LiteDB;
 using RAY.Common.Entities;
 using RAY.Common.Provider;
+using RAY.Storages;
 
 namespace NKnife.Module.Data.Repository.Internal.Repo
 {
     /// <summary>
     ///     The LiteDB repository pattern. A simple way to access your documents in a single class with fluent query api
     /// </summary>
-    public abstract class BaseEntityRepository<T> : IRepository<T, BsonValue>
+    public abstract class BaseEntityRepository<T> : INoSQLRepository<T, BsonValue>
     {
         private readonly LiteRepository _liteRepository;
         private ILiteDatabase _database;
@@ -201,9 +202,9 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
             return count;
         }
 
-        IQueryable<T> IRepository<T, BsonValue>.Query()
+        IQueryable<T> INoSQLRepository<T, BsonValue>.Query()
         {
-            throw new NotSupportedException();
+            return this.Query() as IQueryable<T>;
         }
 
         public ILiteQueryable<T> Query(string? collectionName = null)
@@ -324,6 +325,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
                 return _liteRepository.SingleOrDefault(predicate, collectionName);
             }
         }
+
         #endregion
 
         #region Implementation of IDisposable
