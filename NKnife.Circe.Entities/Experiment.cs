@@ -6,23 +6,22 @@ namespace NKnife.Circe.Entities
 {
     public class Experiment : IExperiment
     {
-        #region Implementation of IVersionedRecord
-        /// <inheritdoc />
-        public int Version { get; set; }
-        #endregion
-        #region Implementation of IDisposable
-        /// <inheritdoc />
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
         #region Implementation of IVariety
         /// <inheritdoc />
         public string VarietyId { get; set; }
 
         /// <inheritdoc />
         public string Name { get; set; }
+        #endregion
+        #region Implementation of IUnique
+        /// <inheritdoc />
+        public string? UniqueCode { get; }
+
+        /// <inheritdoc />
+        public void CreateInstance()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
         #region Implementation of IAuditable
         /// <inheritdoc />
@@ -37,15 +36,9 @@ namespace NKnife.Circe.Entities
         /// <inheritdoc />
         public IUser? Modifier { get; set; }
         #endregion
-        #region Implementation of IUnique
+        #region Implementation of IVersionedRecord
         /// <inheritdoc />
-        public string? UniqueCode { get; }
-
-        /// <inheritdoc />
-        public void CreateInstance()
-        {
-            throw new NotImplementedException();
-        }
+        public int Version { get; set; }
         #endregion
         #region Implementation of IExperiment
         /// <inheritdoc />
@@ -62,6 +55,13 @@ namespace NKnife.Circe.Entities
 
         /// <inheritdoc />
         public event EventHandler? Disposing;
+        #endregion
+        #region Implementation of IDisposable
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
