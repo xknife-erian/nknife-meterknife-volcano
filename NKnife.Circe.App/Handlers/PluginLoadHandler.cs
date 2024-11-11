@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using NKnife.Module.Data.Storages;
 using RAY.Common.Plugin.Manager;
 using RAY.Plugins;
 using RAY.Plugins.WPF;
@@ -28,7 +29,7 @@ namespace NKnife.Circe.App.Handlers
             // 配置程序集处理程序
 
             // 配置类型处理程序
-            //PicoPluginSystem.AddTypeHandler(VariateGetterAutofacModule.ConfigureVariateGetter);
+            PicoPluginSystem.AddTypeHandler(RepositoriesAutofacModule.ConfiguresRepository);
 
             var pluginManager = PicoPluginSystem.Launch();
             return pluginManager;

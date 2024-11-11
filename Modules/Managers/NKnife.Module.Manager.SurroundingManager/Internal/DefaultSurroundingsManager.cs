@@ -87,6 +87,9 @@ namespace NKnife.Module.Manager.SurroundingManager.Internal
             }
         }
 
+        /// <inheritdoc />
+        public string TempDataPath { get; set; }
+
         #region IManager
         public bool IsLaunched { get; private set; } = false;
 

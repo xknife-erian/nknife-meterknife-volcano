@@ -23,5 +23,10 @@ namespace NKnife.Circe.Base.Modules.Manager
         ///     工作日志的保存路径
         /// </summary>
         string LoggerPath { get; }
+
+        /// <summary>
+        ///     应用程序的临时数据保存路径
+        /// </summary>
+        string TempDataPath { get; set; }
     }
 }
