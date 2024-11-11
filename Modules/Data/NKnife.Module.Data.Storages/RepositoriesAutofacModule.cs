@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using NKnife.Module.Data.Storages.Internal;
 using RAY.Storages;
 
 namespace NKnife.Module.Data.Storages
@@ -9,7 +10,7 @@ namespace NKnife.Module.Data.Storages
 
         public static void ConfiguresRepository(Type type)
         {
-            if (typeof(IRdbRepository<,>).IsAssignableFrom(type)
+            if (typeof(BaseRdbInternalRepository<>).IsAssignableFrom(type)
                 && type is { IsAbstract: false, IsGenericType: false })
             {
                 RepositoryTypes.Add(type);

@@ -5,7 +5,7 @@ using RAY.Storages.Common;
 
 namespace NKnife.Module.Data.Storages.Internal.Repositories
 {
-    internal class CompileFeedbackRepository : BaseRdbRepository<CompileFeedback, int>, ICompileFeedbackRepository
+    internal class CompileFeedbackRepository : BaseRdbInternalRepository<CompileFeedback>, ICompileFeedbackRepository
     {
         /// <inheritdoc />
         public async Task<GeneralTree<CompileFeedback>?> GetAsync(string stepId)
