@@ -1,12 +1,12 @@
-﻿using CommunityToolkit.Mvvm.DependencyInjection;
+﻿using System.ComponentModel;
+using System.Text;
+using System.Windows;
+using CommunityToolkit.Mvvm.DependencyInjection;
 using NLog;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.UI;
 using RAY.Windows;
 using RAY.Windows.Common;
-using System.ComponentModel;
-using System.Text;
-using System.Windows;
 
 namespace NKnife.Circe.App.Handlers
 {
@@ -39,6 +39,7 @@ namespace NKnife.Circe.App.Handlers
 
                 return false;
             }
+
             SimpleNamedPipeClient.SendStartArgsThroughPipe(startupArgs);
 
             workbench.ContentRendered += OnWorkbenchContentRendered;

@@ -37,7 +37,10 @@ namespace NKnife.Circe.App
                 {
                     Next = new LogServiceSetterHandler()
                     {
-                        Next = new ShowWorkbenchHandler()
+                        Next = new SurroundingsManagerCheckerHandler()
+                        {
+                            Next = new ShowWorkbenchHandler()
+                        }
                     }
                 }
             };
@@ -51,6 +54,9 @@ namespace NKnife.Circe.App
             var first = new FirstAppLifecycleHandler()
             {
                 Next = new PluginUnloadHandler()
+                {
+                    Next = new SurroundingsManagerCheckerHandler()
+                }
             };
             return first;
         }

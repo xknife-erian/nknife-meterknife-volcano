@@ -30,7 +30,7 @@ namespace NKnife.Feature.Welcome
             };
             _featureSet.MainWorkbenchLoaded += async (_, e) =>
             {
-                await Task.Delay(15000);
+                await Task.Delay(3 * 500);
                 _welcomeWindow?.Close();
             };
             _featureSet.MainWorkbenchClosing += async (_, e) =>
