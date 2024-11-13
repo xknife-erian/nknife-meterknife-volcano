@@ -50,7 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.Ray.Windows", "..\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testbed", "Testbed", "{F466C7E2-81C8-4481-A5A7-6F32297253AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Manager.SurroundingManager", "Modules\Managers\NKnife.Module.Manager.SurroundingManager\NKnife.Module.Manager.SurroundingManager.csproj", "{47EA2163-1F4A-4144-B4F6-9E0AA22E0696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Manager.AppWorkspaceManager", "Modules\Managers\NKnife.Module.Manager.AppWorkspaceManager\NKnife.Module.Manager.AppWorkspaceManager.csproj", "{47EA2163-1F4A-4144-B4F6-9E0AA22E0696}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Managers", "Managers", "{3180208E-0D55-45C8-91E1-ADB903A66B07}"
 EndProject
@@ -108,7 +108,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.Database
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.Storages", "Modules\Data\NKnife.Module.Data.Storages\NKnife.Module.Data.Storages.csproj", "{D11639D4-530C-4813-B786-18595B64F008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Circe.Theme", "NKnife.Circe.Theme\NKnife.Circe.Theme.csproj", "{260382E0-1F2E-42A9-AA63-86D3E725DE89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Circe.Theme", "NKnife.Circe.Theme\NKnife.Circe.Theme.csproj", "{260382E0-1F2E-42A9-AA63-86D3E725DE89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

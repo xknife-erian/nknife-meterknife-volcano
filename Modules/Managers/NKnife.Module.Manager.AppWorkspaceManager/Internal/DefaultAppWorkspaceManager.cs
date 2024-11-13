@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using NKnife.Circe.Base.Modules;
-using NKnife.Circe.Base.Modules.Manager;
+﻿using NKnife.Circe.Base.Modules.Manager;
 using NLog;
 using RAY.Common;
 
-namespace NKnife.Module.Manager.SurroundingManager.Internal
+namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
 {
     internal class DefaultAppWorkspaceManager : IAppWorkspaceManager
     {

@@ -1,11 +1,10 @@
-﻿using NKnife.Circe.Base.Modules;
-using NKnife.Circe.Base.Modules.Manager;
-using NKnife.Module.Manager.SurroundingManager.Internal;
+﻿using NKnife.Circe.Base.Modules.Manager;
+using NKnife.Module.Manager.AppWorkspaceManager.Internal;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Module.Manager.SurroundingManager
+namespace NKnife.Module.Manager.AppWorkspaceManager
 {
-    public class SurroundingManagerModule : BasePicoModule<IAppWorkspaceManager>
+    public class AppWorkspaceManagerModule : BasePicoModule<IAppWorkspaceManager>
     {
         public override Lazy<IAppWorkspaceManager> Build(params object[] args)
         {
