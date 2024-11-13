@@ -1,5 +1,5 @@
 ﻿using LiteDB;
-using NKnife.Circe.Base.Modules.Manager;
+using NKnife.Circe.Base.Modules.Service;
 using NKnife.Circe.Entities;
 using NKnife.Module.Data.Repository.Internal.Repo.Experiments;
 using RAY.Common.Flow;
@@ -16,7 +16,7 @@ namespace NKnife.Module.Data.Repository.Internal.DAO
         public sealed override string DatabasePath { get; protected set; }
 
         #region Ctors
-        public ExperimentDao(IAppWorkspaceManager appWorkspace, ExperimentFileInfo fileInfo)
+        public ExperimentDao(IAppWorkspaceService appWorkspace, ExperimentFileInfo fileInfo)
         {
             DatabasePath = fileInfo.ExperimentFileCacheFullPath();
             ConnectingString = BuildConnectionString(DatabasePath, fileInfo.Password);

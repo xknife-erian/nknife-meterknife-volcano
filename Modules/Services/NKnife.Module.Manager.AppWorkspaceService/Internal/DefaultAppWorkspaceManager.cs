@@ -1,13 +1,15 @@
-﻿using NKnife.Circe.Base.Modules.Manager;
+﻿using NKnife.Circe.Base.Modules.Service;
 using NLog;
 using RAY.Common;
 
-namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
+namespace NKnife.Module.Manager.AppWorkspaceService.Internal
 {
-    internal class DefaultAppWorkspaceManager : IAppWorkspaceManager
+    internal class DefaultAppWorkspaceService : IAppWorkspaceService
     {
         private const string PATH_NAME_FLAG = nameof(Path);
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
+
+        private bool _isLaunched = false;
 
         private string? _appDeveloperPath;
         private string? _appPath;
@@ -18,6 +20,11 @@ namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
         private string? _backupPath;
 
         private readonly string _usersDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+        /// <inheritdoc />
+        public Guid Id { get; } = Guid.NewGuid();
+
+        public string Description { get; } = "软件运行环境的管理器";
 
         /// <inheritdoc />
         public string AppDeveloperPath
@@ -126,11 +133,10 @@ namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
         }
 
         #region IManager
-        public bool IsLaunched { get; private set; } = false;
 
-        public IManager Initialize(params object[] args)
+        public bool Initialize(params object[] args)
         {
-            if(!IsLaunched)
+            if(!_isLaunched)
             {
                 s_logger.Debug($"{AppDeveloperPath},{Directory.Exists(AppDeveloperPath)}");
                 s_logger.Info($"{nameof(Environment.SpecialFolder.MyDocuments)},{Directory.Exists(_usersDocumentsPath)}");
@@ -141,16 +147,11 @@ namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
                 s_logger.Info($"{TempPath},{Directory.Exists(TempPath)}");
                 s_logger.Info($"{BackupPath},{Directory.Exists(BackupPath)}");
             }
-            IsLaunched = true;
-            return this;
+            _isLaunched = true;
+            return _isLaunched;
         }
 
-        public Task<IManager> LaunchAsync(params object[] args)
-        {
-            return Task.FromResult<IManager>(this);
-        }
-
-        public bool Stop()
+        private bool CleanWorkspace()
         {
             if (Directory.Exists(_tempPath))
             {
@@ -166,11 +167,9 @@ namespace NKnife.Module.Manager.AppWorkspaceManager.Internal
             return true;
         }
 
-        public string Description { get; } = "软件运行环境的管理器";
-
         public void Dispose()
         {
-            Stop();
+            CleanWorkspace();
         }
         #endregion
 

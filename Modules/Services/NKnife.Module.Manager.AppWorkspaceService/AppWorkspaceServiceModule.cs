@@ -1,14 +1,14 @@
-﻿using NKnife.Circe.Base.Modules.Manager;
-using NKnife.Module.Manager.AppWorkspaceManager.Internal;
+﻿using NKnife.Circe.Base.Modules.Service;
+using NKnife.Module.Manager.AppWorkspaceService.Internal;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Module.Manager.AppWorkspaceManager
+namespace NKnife.Module.Manager.AppWorkspaceService
 {
-    public class AppWorkspaceManagerModule : BasePicoModule<IAppWorkspaceManager>
+    public class AppWorkspaceServiceModule : BasePicoModule<IAppWorkspaceService>
     {
-        public override Lazy<IAppWorkspaceManager> Build(params object[] args)
+        public override Lazy<IAppWorkspaceService> Build(params object[] args)
         {
-            return new Lazy<IAppWorkspaceManager>(() => new DefaultAppWorkspaceManager());
+            return new Lazy<IAppWorkspaceService>(() => new DefaultAppWorkspaceService());
         }   
         
         public override Task<bool> StartServiceAsync()

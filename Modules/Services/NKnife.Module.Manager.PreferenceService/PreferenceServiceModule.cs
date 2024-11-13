@@ -1,17 +1,17 @@
-﻿using NKnife.Circe.Base.Modules.Manager;
-using NKnife.Module.Manager.OptionManager.Internal;
+﻿using NKnife.Circe.Base.Modules.Service;
+using NKnife.Module.Manager.PreferenceService.Internal;
 using RAY.Common;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Module.Manager.OptionManager
+namespace NKnife.Module.Manager.PreferenceService
 {
-    public class OptionManagerModule : BasePicoModule<IOptionManager>, ISupportUsingModule
+    public class PreferenceServiceModule : BasePicoModule<IPreferenceService>, ISupportUsingModule
     {
         private readonly Context _context = new ();
-        private IOptionManager? _optionManager;
-        private Lazy<IOptionManager>? _optionManagerLazy;
+        private IPreferenceService? _optionManager;
+        private Lazy<IPreferenceService>? _optionManagerLazy;
 
         /// <inheritdoc />
         public Task<IPicoPlugin> InjectAsync(Lazy<IModulesManager> moduleManagerLazy)
@@ -42,11 +42,11 @@ namespace NKnife.Module.Manager.OptionManager
         }
 
         /// <inheritdoc />
-        public override Lazy<IOptionManager> Build(params object[] args)
+        public override Lazy<IPreferenceService> Build(params object[] args)
         {
-            return _optionManagerLazy ??= new Lazy<IOptionManager>(() =>
+            return _optionManagerLazy ??= new Lazy<IPreferenceService>(() =>
             {
-                return _optionManager ??= new DefaultOptionManager(_context.AppWorkspace);
+                return _optionManager ??= new DefaultPreferenceService(_context.AppWorkspace);
             });
         }
 
@@ -56,12 +56,12 @@ namespace NKnife.Module.Manager.OptionManager
 
     internal class Context : BaseModuleContext
     {
-        private Lazy<IAppWorkspaceManager>? _surroundingsLazy;
-        public IAppWorkspaceManager AppWorkspace => _surroundingsLazy!.Value;
+        private Lazy<IAppWorkspaceService>? _surroundingsLazy;
+        public IAppWorkspaceService AppWorkspace => _surroundingsLazy!.Value;
 
         public override void Initialize()
         {
-            _surroundingsLazy = GetModule<IAppWorkspaceManager>();
+            _surroundingsLazy = GetModule<IAppWorkspaceService>();
         }
     }
 }

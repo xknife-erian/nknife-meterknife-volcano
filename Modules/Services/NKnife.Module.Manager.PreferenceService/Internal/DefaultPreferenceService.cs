@@ -1,17 +1,17 @@
 ﻿using System.Collections.Immutable;
-using NKnife.Circe.Base.Modules.Manager;
+using NKnife.Circe.Base.Modules.Service;
 using NLog;
 using RAY.Common;
 using RAY.Library;
 using RAY.Library.XML;
 
-namespace NKnife.Module.Manager.OptionManager.Internal
+namespace NKnife.Module.Manager.PreferenceService.Internal
 {
     /// <summary>
     ///     用户选项管理器
     /// </summary>
-    internal sealed class DefaultOptionManager(IAppWorkspaceManager __appWorkspace)
-        : QuickXml(Path.Combine(__appWorkspace.OptionPath, OPTION_FILE)), IOptionManager
+    internal sealed class DefaultPreferenceService(IAppWorkspaceService __appWorkspace)
+        : QuickXml(Path.Combine(__appWorkspace.OptionPath, OPTION_FILE)), IPreferenceService
     {
         private const string OPTION_FILE = "option.conf";
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
