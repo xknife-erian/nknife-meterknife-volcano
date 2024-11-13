@@ -46,7 +46,7 @@ namespace NKnife.Module.Manager.OptionManager
         {
             return _optionManagerLazy ??= new Lazy<IOptionManager>(() =>
             {
-                return _optionManager ??= new DefaultOptionManager(_context.Surroundings);
+                return _optionManager ??= new DefaultOptionManager(_context.AppWorkspace);
             });
         }
 
@@ -56,12 +56,12 @@ namespace NKnife.Module.Manager.OptionManager
 
     internal class Context : BaseModuleContext
     {
-        private Lazy<ISurroundingsManager>? _surroundingsLazy;
-        public ISurroundingsManager Surroundings => _surroundingsLazy!.Value;
+        private Lazy<IAppWorkspaceManager>? _surroundingsLazy;
+        public IAppWorkspaceManager AppWorkspace => _surroundingsLazy!.Value;
 
         public override void Initialize()
         {
-            _surroundingsLazy = GetModule<ISurroundingsManager>();
+            _surroundingsLazy = GetModule<IAppWorkspaceManager>();
         }
     }
 }

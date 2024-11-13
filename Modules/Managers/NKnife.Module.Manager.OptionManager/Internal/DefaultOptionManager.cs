@@ -10,8 +10,8 @@ namespace NKnife.Module.Manager.OptionManager.Internal
     /// <summary>
     ///     用户选项管理器
     /// </summary>
-    internal sealed class DefaultOptionManager(ISurroundingsManager surroundings)
-        : QuickXml(Path.Combine(surroundings.OptionPath, OPTION_FILE)), IOptionManager
+    internal sealed class DefaultOptionManager(IAppWorkspaceManager __appWorkspace)
+        : QuickXml(Path.Combine(__appWorkspace.OptionPath, OPTION_FILE)), IOptionManager
     {
         private const string OPTION_FILE = "option.conf";
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();

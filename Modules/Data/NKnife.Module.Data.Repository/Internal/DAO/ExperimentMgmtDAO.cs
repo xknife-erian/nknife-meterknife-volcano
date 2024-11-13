@@ -36,12 +36,12 @@ namespace NKnife.Module.Data.Repository.Internal.DAO
         #endregion
 
         #region Ctors
-        public ExperimentMgmtDao(ISurroundingsManager surroundings) : this(surroundings,
-                                                                           Path.Combine("surroundings.LiteDbMgmtFilePath",
+        public ExperimentMgmtDao(IAppWorkspaceManager appWorkspace) : this(appWorkspace,
+                                                                           Path.Combine("__appWorkspace.LiteDbMgmtFilePath",
                                                                                $"{DB_NAME}.{RayFileExt.ExpHistoryMgmtExpandedName}"),
-                                                                           "surroundings.LiteDbFilePassword") { }
+                                                                           "__appWorkspace.LiteDbFilePassword") { }
 
-        private ExperimentMgmtDao(ISurroundingsManager surroundings, string path, string password = "")
+        private ExperimentMgmtDao(IAppWorkspaceManager appWorkspace, string path, string password = "")
         {
             ConnectingString = BuildConnectionString(path, password);
             var database = DbFactory.GetDatabase(ConnectingString, out var created);
@@ -52,9 +52,9 @@ namespace NKnife.Module.Data.Repository.Internal.DAO
             ExperimentFileInfoRepo = new ExperimentFileInfoRepo(database);
         }
 
-        public static ExperimentMgmtDao Create(ISurroundingsManager surroundings, string path)
+        public static ExperimentMgmtDao Create(IAppWorkspaceManager appWorkspace, string path)
         {
-            return new ExperimentMgmtDao(surroundings, path);
+            return new ExperimentMgmtDao(appWorkspace, path);
         }
         #endregion
     }

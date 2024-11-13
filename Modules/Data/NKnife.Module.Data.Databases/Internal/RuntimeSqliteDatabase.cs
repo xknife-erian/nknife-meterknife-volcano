@@ -24,7 +24,7 @@ namespace NKnife.Module.Data.Databases.Internal
 
         private void DbFileManager(string experimentId)
         {
-            var tempDataDir = _context.Surroundings.TempPath;
+            var tempDataDir = _context.AppWorkspace.TempPath;
             _runtimeDataPath = Path.Combine(tempDataDir, "Runtime");
 
             try

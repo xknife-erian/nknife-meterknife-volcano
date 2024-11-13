@@ -5,11 +5,11 @@ using RAY.Common.Plugin.Modules;
 
 namespace NKnife.Module.Manager.SurroundingManager
 {
-    public class SurroundingManagerModule : BasePicoModule<ISurroundingsManager>
+    public class SurroundingManagerModule : BasePicoModule<IAppWorkspaceManager>
     {
-        public override Lazy<ISurroundingsManager> Build(params object[] args)
+        public override Lazy<IAppWorkspaceManager> Build(params object[] args)
         {
-            return new Lazy<ISurroundingsManager>(() => new DefaultSurroundingsManager());
+            return new Lazy<IAppWorkspaceManager>(() => new DefaultAppWorkspaceManager());
         }   
         
         public override Task<bool> StartServiceAsync()

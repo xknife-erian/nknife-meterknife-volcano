@@ -7,15 +7,15 @@ namespace NKnife.Module.Data.Databases.Internal
     class ModuleContext : BaseModuleContext
     {
         private Lazy<IIoCManager>? _iocManagerLazy;
-        private Lazy<ISurroundingsManager>? _surroundingsLazy;
+        private Lazy<IAppWorkspaceManager>? _surroundingsLazy;
 
         public IIoCManager IoCManager => _iocManagerLazy!.Value;
-        public ISurroundingsManager Surroundings => _surroundingsLazy!.Value;
+        public IAppWorkspaceManager AppWorkspace => _surroundingsLazy!.Value;
 
         /// <inheritdoc />
         public override void Initialize()
         {
-            _surroundingsLazy = GetModule<ISurroundingsManager>();
+            _surroundingsLazy = GetModule<IAppWorkspaceManager>();
         }
 
         public void SetIoCManager(Lazy<IIoCManager> iocManagerLazy)

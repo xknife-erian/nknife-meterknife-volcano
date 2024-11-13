@@ -11,7 +11,7 @@ using RAY.Common;
 
 namespace NKnife.Module.Manager.SurroundingManager.Internal
 {
-    internal class DefaultSurroundingsManager : ISurroundingsManager
+    internal class DefaultAppWorkspaceManager : IAppWorkspaceManager
     {
         private const string PATH_NAME_FLAG = nameof(Path);
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();

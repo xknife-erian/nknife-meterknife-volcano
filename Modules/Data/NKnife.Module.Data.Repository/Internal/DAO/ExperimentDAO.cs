@@ -16,7 +16,7 @@ namespace NKnife.Module.Data.Repository.Internal.DAO
         public sealed override string DatabasePath { get; protected set; }
 
         #region Ctors
-        public ExperimentDao(ISurroundingsManager surroundings, ExperimentFileInfo fileInfo)
+        public ExperimentDao(IAppWorkspaceManager appWorkspace, ExperimentFileInfo fileInfo)
         {
             DatabasePath = fileInfo.ExperimentFileCacheFullPath();
             ConnectingString = BuildConnectionString(DatabasePath, fileInfo.Password);
