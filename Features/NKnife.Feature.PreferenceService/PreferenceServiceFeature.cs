@@ -1,12 +1,12 @@
-﻿using NKnife.Feature.OptionManager.Internal;
+﻿using NKnife.Feature.PreferenceService.Internal;
 using NLog;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Plugins.WPF.Common;
 
-namespace NKnife.Feature.OptionManager
+namespace NKnife.Feature.PreferenceService
 {
-    public class OptionManagerFeature : BasePicoFeatures, ISupportUsingModule
+    public class PreferenceServiceFeature : BasePicoFeatures, ISupportUsingModule
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ModuleContext _moduleContext = new ModuleContext();

@@ -1,8 +1,8 @@
 ﻿using NKnife.Circe.Base.Modules.Service;
-using NKnife.Module.Manager.AppWorkspaceService.Internal;
+using NKnife.Module.AppWorkspaceService.Internal;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Module.Manager.AppWorkspaceService
+namespace NKnife.Module.AppWorkspaceService
 {
     public class AppWorkspaceServiceModule : BasePicoModule<IAppWorkspaceService>
     {

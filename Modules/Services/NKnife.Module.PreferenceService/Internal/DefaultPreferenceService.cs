@@ -5,7 +5,7 @@ using RAY.Common;
 using RAY.Library;
 using RAY.Library.XML;
 
-namespace NKnife.Module.Manager.PreferenceService.Internal
+namespace NKnife.Module.PreferenceService.Internal
 {
     /// <summary>
     ///     用户选项管理器

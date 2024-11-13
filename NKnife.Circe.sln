@@ -50,7 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.Ray.Windows", "..\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testbed", "Testbed", "{F466C7E2-81C8-4481-A5A7-6F32297253AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Manager.AppWorkspaceService", "Modules\Services\NKnife.Module.Manager.AppWorkspaceService\NKnife.Module.Manager.AppWorkspaceService.csproj", "{47EA2163-1F4A-4144-B4F6-9E0AA22E0696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.AppWorkspaceService", "Modules\Services\NKnife.Module.AppWorkspaceService\NKnife.Module.AppWorkspaceService.csproj", "{47EA2163-1F4A-4144-B4F6-9E0AA22E0696}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Managers", "Managers", "{3180208E-0D55-45C8-91E1-ADB903A66B07}"
 EndProject
@@ -64,7 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{2B9DEE8E-55D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Feature.PluginBrowser", "..\Mercury\Features\LEIAO.Feature.PluginBrowser\LEIAO.Feature.PluginBrowser.csproj", "{3F1FEA16-0199-4D9E-9CD5-00DF48AEDC90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Manager.PreferenceService", "Modules\Services\NKnife.Module.Manager.PreferenceService\NKnife.Module.Manager.PreferenceService.csproj", "{4C757E00-AD61-4328-ACD6-5792C20B2B23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.PreferenceService", "Modules\Services\NKnife.Module.PreferenceService\NKnife.Module.PreferenceService.csproj", "{4C757E00-AD61-4328-ACD6-5792C20B2B23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Mock", "Modules\NKnife.Module.Mock\NKnife.Module.Mock.csproj", "{B50D8FC4-4D89-422D-ABCC-73A168CF58ED}"
 EndProject
@@ -94,7 +94,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Circe.Entities", "NK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Module.Data.Repository", "Modules\Data\NKnife.Module.Data.Repository\NKnife.Module.Data.Repository.csproj", "{ABEB2A07-76AB-4D04-AF7E-4C1AB7A091F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.OptionManager", "Features\NKnife.Feature.OptionManager\NKnife.Feature.OptionManager.csproj", "{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.PreferenceService", "Features\NKnife.Feature.PreferenceService\NKnife.Feature.PreferenceService.csproj", "{2A26DA60-4AFC-4416-9F3C-4FCE1AA84A84}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Addin.PerformanceDetector", "..\Mercury\Addins\LEIAO.Addin.PerformanceDetector\LEIAO.Addin.PerformanceDetector.csproj", "{6AB6260B-35B5-4EAC-9A11-FD4BA7906E0E}"
 EndProject

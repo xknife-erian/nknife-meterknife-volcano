@@ -1,11 +1,11 @@
 ﻿using NKnife.Circe.Base.Modules.Service;
-using NKnife.Module.Manager.PreferenceService.Internal;
+using NKnife.Module.PreferenceService.Internal;
 using RAY.Common;
 using RAY.Common.Plugin;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Module.Manager.PreferenceService
+namespace NKnife.Module.PreferenceService
 {
     public class PreferenceServiceModule : BasePicoModule<IPreferenceService>, ISupportUsingModule
     {

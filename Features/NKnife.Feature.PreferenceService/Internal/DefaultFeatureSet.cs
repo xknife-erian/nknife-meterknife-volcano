@@ -6,9 +6,8 @@ using RAY.Common.Enums;
 using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
-using RAY.Plugins.WPF.Ribbons;
 
-namespace NKnife.Feature.OptionManager.Internal
+namespace NKnife.Feature.PreferenceService.Internal
 {
     class DefaultFeatureSet() : BaseFeatureSet
     {

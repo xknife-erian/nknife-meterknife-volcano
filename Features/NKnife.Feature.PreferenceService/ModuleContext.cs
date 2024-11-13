@@ -1,15 +1,15 @@
 ﻿using RAY.Common;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Feature.OptionManager
+namespace NKnife.Feature.PreferenceService
 {
     class ModuleContext : BaseModuleContext
     {
-        private Lazy<IOptionManager>? _optionManagerLazy;
-        public IOptionManager? OptionManager => _optionManagerLazy!.Value;
+        private Lazy<IPreferenceService>? _preferenceManagerLazy;
+        public IPreferenceService? PreferenceService => _preferenceManagerLazy!.Value;
         public override void Initialize()
         {
-            _optionManagerLazy = GetModule<IOptionManager>();
+            _preferenceManagerLazy = GetModule<IPreferenceService>();
         }
     }
 }

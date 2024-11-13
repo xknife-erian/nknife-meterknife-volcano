@@ -1,8 +1,7 @@
 ﻿using NKnife.Circe.Base.Modules.Service;
 using NLog;
-using RAY.Common;
 
-namespace NKnife.Module.Manager.AppWorkspaceService.Internal
+namespace NKnife.Module.AppWorkspaceService.Internal
 {
     internal class DefaultAppWorkspaceService : IAppWorkspaceService
     {
