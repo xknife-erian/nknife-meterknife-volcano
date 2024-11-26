@@ -1,7 +1,6 @@
 ﻿using LiteDB;
 using NKnife.Circe.Base.Modules.Service;
 using NKnife.Module.Data.Repository.Internal.Repo.Experiments;
-using RAY.Library.Files;
 
 namespace NKnife.Module.Data.Repository.Internal.DAO
 {
@@ -38,7 +37,7 @@ namespace NKnife.Module.Data.Repository.Internal.DAO
         #region Ctors
         public ExperimentMgmtDao(IAppWorkspaceService appWorkspace) : this(appWorkspace,
                                                                            Path.Combine("__appWorkspace.LiteDbMgmtFilePath",
-                                                                               $"{DB_NAME}.{RayFileExt.ExpHistoryMgmtExpandedName}"),
+                                                                               $"{DB_NAME}.RayFileExt.ExpHistoryMgmtExpandedName"),
                                                                            "__appWorkspace.LiteDbFilePassword") { }
 
         private ExperimentMgmtDao(IAppWorkspaceService appWorkspace, string path, string password = "")
