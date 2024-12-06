@@ -3,7 +3,7 @@ using NKnife.Circe.Base.Modules.Service;
 using NLog;
 using RAY.Common;
 using RAY.Library;
-using RAY.Library.XML;
+using RAY.Library.Concepts.XML;
 
 namespace NKnife.Module.PreferenceService.Internal
 {

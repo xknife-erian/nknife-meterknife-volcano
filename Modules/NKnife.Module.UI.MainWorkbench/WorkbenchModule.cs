@@ -25,7 +25,7 @@ namespace NKnife.Module.UI.MainWorkbench
                 {
                     var workbenchVm = _context.WorkbenchViewModel;
 
-                    var menuContext = new UIManagerContext(_context.WorkbenchViewModel, _context.RegisterPaneLocator, _context.RegisterDialogLocator);
+                    var menuContext = new UIEssentials(_context.WorkbenchViewModel, _context.RegisterPaneLocator, _context.RegisterDialogLocator);
                     var menus = _context.PluginManager.InitializeFeaturePoints(menuContext);
                     foreach (var categoryPoint in menus)
                         workbenchVm.MenusVm.CategoryMenus.Add(categoryPoint);

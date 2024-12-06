@@ -3,7 +3,6 @@ using System.Linq.Expressions;
 using System.Numerics;
 using LiteDB;
 using RAY.Common.Entities;
-using RAY.Common.Provider;
 using RAY.Storages;
 
 namespace NKnife.Module.Data.Repository.Internal.Repo
@@ -15,13 +14,12 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
     {
         private readonly LiteRepository _liteRepository;
         private ILiteDatabase _database;
-        private object s_asyncReadWriteLockObject = new object();
 
         static BaseEntityRepository()
         {
             BsonMapper.Global.MaxDepth = 40;
             //向LiteDB中注册DateTime类型，LiteDB内部实现中对毫秒数的处理会丢失精度。
-            BsonMapper.Global.RegisterType(serialize: dtOffset => dtOffset.ToUnixTimeMilliseconds(), deserialize: value =>
+            BsonMapper.Global.RegisterType(dtOffset => dtOffset.ToUnixTimeMilliseconds(), value =>
             {
                 try
                 {
@@ -34,7 +32,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
                     return value.AsDateTime;
                 }
             });
-            BsonMapper.Global.RegisterType(serialize: dtOffset => dtOffset.Ticks, deserialize: value =>
+            BsonMapper.Global.RegisterType(dtOffset => dtOffset.Ticks, value =>
             {
                 try
                 {
@@ -47,84 +45,75 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
                     return value.AsDateTime;
                 }
             });
-            BsonMapper.Global.RegisterType(serialize: pair => $"{pair.Item1},{pair.Item2}", deserialize: value =>
+            BsonMapper.Global.RegisterType(pair => $"{pair.Item1},{pair.Item2}", value =>
             {
                 var array = value.AsString.Split(',');
 
                 return (uint.Parse(array[0]), uint.Parse(array[1]));
             });
             //向LiteDB中注册Version类型
-            BsonMapper.Global.RegisterType(
-                serialize: version => $"{version.Major},{version.Minor},{version.Build},{version.Revision}", deserialize: value =>
-                {
-                    var array    = value.AsString.Split(',');
-                    var major    = int.Parse(array[0]);
-                    var minor    = int.Parse(array[1]);
-                    var build    = int.Parse(array[2]);
-                    var revision = int.Parse(array[3]);
+            BsonMapper.Global.RegisterType(version => $"{version.Major},{version.Minor},{version.Build},{version.Revision}",
+                                           value =>
+                                           {
+                                               var array    = value.AsString.Split(',');
+                                               var major    = int.Parse(array[0]);
+                                               var minor    = int.Parse(array[1]);
+                                               var build    = int.Parse(array[2]);
+                                               var revision = int.Parse(array[3]);
 
-                    return new Version(major, minor >= 0 ? minor : 0, build >= 0 ? build : 0, revision >= 0 ? revision : 0);
-                });
+                                               return new Version(major, minor >= 0 ? minor : 0, build >= 0 ? build : 0,
+                                                                  revision >= 0 ? revision : 0);
+                                           });
             //向LiteDB中注册RectangleF类型
-            BsonMapper.Global.RegisterType(serialize: x => $"{x.X},{x.Y},{x.Width},{x.Height}", deserialize: value =>
+            BsonMapper.Global.RegisterType(x => $"{x.X},{x.Y},{x.Width},{x.Height}", value =>
             {
                 var array = value.AsString.Split(',');
 
                 return new RectangleF(float.Parse(array[0]), float.Parse(array[1]), float.Parse(array[2]), float.Parse(array[3]));
             });
             //向LiteDB中注册Vector2类型
-            BsonMapper.Global.RegisterType(serialize: vector2 => $"{vector2.X},{vector2.Y}", deserialize: value =>
+            BsonMapper.Global.RegisterType(vector2 => $"{vector2.X},{vector2.Y}", value =>
             {
                 var array = value.AsString.Split(',');
 
                 return new Vector2(float.Parse(array[0]), float.Parse(array[1]));
             });
             //向LiteDB中注册Vector3类型
-            BsonMapper.Global.RegisterType(serialize: vector3 => $"{vector3.X},{vector3.Y},{vector3.Z}", deserialize: value =>
+            BsonMapper.Global.RegisterType(vector3 => $"{vector3.X},{vector3.Y},{vector3.Z}", value =>
             {
                 var array = value.AsString.Split(',');
 
                 return new Vector3(float.Parse(array[0]), float.Parse(array[1]), float.Parse(array[2]));
             });
             //向LiteDB中注册Vector4类型
-            BsonMapper.Global.RegisterType(serialize: vector4 => $"{vector4.X},{vector4.Y},{vector4.Z},{vector4.W}",
-                                           deserialize: value =>
-                                           {
-                                               var v = value.AsString.Split(',');
+            BsonMapper.Global.RegisterType(vector4 => $"{vector4.X},{vector4.Y},{vector4.Z},{vector4.W}", value =>
+            {
+                var v = value.AsString.Split(',');
 
-                                               return new Vector4(float.Parse(v[0]), float.Parse(v[1]), float.Parse(v[2]),
-                                                                  float.Parse(v[3]));
-                                           });
+                return new Vector4(float.Parse(v[0]), float.Parse(v[1]), float.Parse(v[2]), float.Parse(v[3]));
+            });
         }
 
         protected BaseEntityRepository(string dbFile)
         {
             _liteRepository = new LiteRepository(dbFile);
-            _database = _liteRepository.Database;
+            _database       = _liteRepository.Database;
         }
 
         protected BaseEntityRepository(LiteDatabase database)
         {
-            _database = database;
+            _database       = database;
             _liteRepository = new LiteRepository(database);
         }
 
         #region Implementation of IRepository<T,BsonValue>
-
-        public void Checkpoint()
-        {
-            //_database.SafeCheckpoint();
-        }
 
         /// <summary>
         ///     Insert a new document into collection. Document Id must be a new value in collection - Returns document Id
         /// </summary>
         public void Insert(T entity, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
-            {
-                _liteRepository.Insert(entity, collectionName);
-            }
+            _liteRepository.Insert(entity, collectionName);
             //Checkpoint();
         }
 
@@ -135,10 +124,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         public int Insert(IEnumerable<T> entities, string? collectionName = null)
         {
             int count;
-            lock (s_asyncReadWriteLockObject)
-            {
-                count = _liteRepository.Insert(entities, collectionName);
-            }
+            count = _liteRepository.Insert(entities, collectionName);
             //Checkpoint();
 
             return count;
@@ -150,10 +136,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         public bool Update(T entity, string? collectionName = null)
         {
             bool flag;
-            lock (s_asyncReadWriteLockObject)
-            {
-                flag = _liteRepository.Update(entity, collectionName);
-            }
+            flag = _liteRepository.Update(entity, collectionName);
             //Checkpoint();
 
             return flag;
@@ -163,10 +146,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         public int Update(IEnumerable<T> entities, string? collectionName = null)
         {
             int count;
-            lock (s_asyncReadWriteLockObject)
-            {
-                count = _liteRepository.Update(entities, collectionName);
-            }
+            count = _liteRepository.Update(entities, collectionName);
             //Checkpoint();
 
             return count;
@@ -178,10 +158,7 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         public bool Upsert(T entity, string? collectionName = null)
         {
             bool flag;
-            lock (s_asyncReadWriteLockObject)
-            {
-                flag = _liteRepository.Upsert(entity, collectionName);
-            }
+            flag = _liteRepository.Upsert(entity, collectionName);
             //Checkpoint();
 
             return flag;
@@ -192,34 +169,24 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// </summary>
         public int Upsert(IEnumerable<T> entities, string? collectionName = null)
         {
-            int count;
-            lock (s_asyncReadWriteLockObject)
-            {
-                count = _liteRepository.Upsert(entities, collectionName);
-            }
-            //Checkpoint();
-
+            var count = _liteRepository.Upsert(entities, collectionName);
             return count;
         }
 
         IQueryable<T> INoSQLRepository<T, BsonValue>.Query()
         {
-            return this.Query() as IQueryable<T>;
+            return Query() as IQueryable<T>;
         }
 
         public ILiteQueryable<T> Query(string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
-            {
                 return _liteRepository.Query<T>(collectionName);
-            }
         }
 
         /// <summary>Delete entity based on _id key</summary>
         public bool Delete(BsonValue id, string? collectionName = null)
         {
             bool flag;
-            lock (s_asyncReadWriteLockObject)
             {
                 flag = _liteRepository.Delete<T>(id, collectionName);
             }
@@ -232,7 +199,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         public int DeleteMany(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
             int count;
-            lock (s_asyncReadWriteLockObject)
             {
                 count = _liteRepository.DeleteMany(predicate, collectionName);
             }
@@ -249,7 +215,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <param name="collectionName">Collection Name</param>
         public bool EnsureIndex<TK>(Expression<Func<T, TK>> keySelector, bool unique = false, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.EnsureIndex(keySelector, unique, collectionName);
             }
@@ -262,9 +227,11 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <param name="keySelector">LinqExpression to be converted into BsonExpression to be indexed</param>
         /// <param name="unique">Create a unique keys index?</param>
         /// <param name="collectionName">Collection Name</param>
-        public bool EnsureIndex<TK>(string name, Expression<Func<T, TK>> keySelector, bool unique = false, string? collectionName = null)
+        public bool EnsureIndex<TK>(string name,
+                                    Expression<Func<T, TK>> keySelector,
+                                    bool unique = false,
+                                    string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.EnsureIndex(name, keySelector, unique, collectionName);
             }
@@ -275,7 +242,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// </summary>
         public T SingleById(BsonValue id, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.SingleById<T>(id, collectionName);
             }
@@ -284,7 +250,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <summary>Execute Query[L].Where(predicate).ToList();</summary>
         public List<T> Fetch(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.Fetch(predicate, collectionName);
             }
@@ -293,7 +258,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <summary>Execute Query[L].Where(predicate).First();</summary>
         public T First(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.First(predicate, collectionName);
             }
@@ -302,7 +266,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <summary>Execute Query[L].Where(predicate).FirstOrDefault();</summary>
         public T FirstOrDefault(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.FirstOrDefault(predicate, collectionName);
             }
@@ -311,7 +274,6 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <summary>Execute Query[L].Where(predicate).Single();</summary>
         public T Single(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.Single(predicate, collectionName);
             }
@@ -320,12 +282,10 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
         /// <summary>Execute Query[L].Where(predicate).SingleOrDefault();</summary>
         public T SingleOrDefault(Expression<Func<T, bool>> predicate, string? collectionName = null)
         {
-            lock (s_asyncReadWriteLockObject)
             {
                 return _liteRepository.SingleOrDefault(predicate, collectionName);
             }
         }
-
         #endregion
 
         #region Implementation of IDisposable
@@ -343,9 +303,8 @@ namespace NKnife.Module.Data.Repository.Internal.Repo
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposing) return;
+            if(!disposing) return;
 
-            lock (s_asyncReadWriteLockObject)
             {
                 _liteRepository.Database.Dispose();
             }
