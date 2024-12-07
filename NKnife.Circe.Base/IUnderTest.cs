@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RAY.Storages;
 
-namespace NKnife.Circe.Base.Domains
+namespace NKnife.Circe.Base
 {
     /// <summary>
     /// 标记一个正在测试中物件的接口

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NKnife.Circe.Base.Domains;
+using NKnife.Circe.Base;
 
 namespace NKnife.Circe.Entities
 {
@@ -26,11 +26,6 @@ namespace NKnife.Circe.Entities
         /// <inheritdoc />
         public DateTime ModifyTime { get; set; }
         #endregion
-
-    }
-
-    public class Connector
-    {
 
     }
 }

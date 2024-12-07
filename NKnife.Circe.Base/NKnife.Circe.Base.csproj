@@ -10,4 +10,8 @@
     <ProjectReference Include="..\..\Mercury\Common\RAY.Common\RAY.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Domains\" />
+  </ItemGroup>
+
 </Project>
