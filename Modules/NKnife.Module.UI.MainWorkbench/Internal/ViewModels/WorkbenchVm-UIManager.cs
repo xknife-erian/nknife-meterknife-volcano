@@ -31,10 +31,22 @@ namespace NKnife.Module.UI.MainWorkbench.Internal.ViewModels
         }
 
         /// <inheritdoc />
+        public void ReOpenDocumentPane(string contentId)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
         public void ShowToolPane(INotifyPropertyChanged document)
         {
             if (document is BaseViewModel viewModel)
                 DocksVm.ActivateTool(viewModel);
+        }
+
+        /// <inheritdoc />
+        public void ReOpenToolPane(string contentId)
+        {
+            throw new NotImplementedException();
         }
 
         /// <inheritdoc />

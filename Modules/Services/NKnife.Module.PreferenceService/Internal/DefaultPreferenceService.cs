@@ -1,9 +1,10 @@
-﻿using System.Collections.Immutable;
-using NKnife.Circe.Base.Modules.Service;
+﻿using NKnife.Circe.Base.Modules.Service;
 using NLog;
 using RAY.Common;
+using RAY.Common.Services;
 using RAY.Library;
 using RAY.Library.Concepts.XML;
+using System.Collections.Immutable;
 
 namespace NKnife.Module.PreferenceService.Internal
 {

@@ -1,4 +1,4 @@
-﻿using RAY.Common;
+﻿using RAY.Common.Services;
 
 namespace NKnife.Circe.Base.Modules.Service
 {
