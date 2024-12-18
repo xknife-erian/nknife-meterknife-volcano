@@ -1,6 +1,6 @@
 ﻿using RAY.Common.Services;
 
-namespace NKnife.Circe.Base.Modules.Service
+namespace NKnife.Circe.Base.Modules.Services
 {
     /// <summary>
     /// 应用程序运行时工作空间的管理器。包括运行时相关的目录与文件的管理，相关的配置管理等。<br/>

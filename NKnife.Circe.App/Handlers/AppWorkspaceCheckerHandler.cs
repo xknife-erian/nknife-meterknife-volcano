@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using CommunityToolkit.Mvvm.DependencyInjection;
-using NKnife.Circe.Base.Modules.Service;
+using NKnife.Circe.Base.Modules.Services;
 using NLog;
 using RAY.Common.Plugin.Manager;
 using RAY.Windows.Common;

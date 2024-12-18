@@ -1,4 +1,4 @@
-﻿using NKnife.Circe.Base.Modules.Service;
+﻿using NKnife.Circe.Base.Modules.Services;
 using NLog;
 
 namespace NKnife.Module.AppWorkspaceService.Internal

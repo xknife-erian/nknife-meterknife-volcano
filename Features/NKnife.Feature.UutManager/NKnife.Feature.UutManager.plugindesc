@@ -21,7 +21,7 @@
                    Header="数据">
                 <Focal Id="135601E9-B444-402C-AC66-BC9AC77BAB71"
                        Header="被测物"
-					   Command="ShowLoggerPane">
+					   Command="ShowUutManagerPane">
 					<IconCode>
 						<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
                             <defs>

@@ -1,11 +1,12 @@
 ﻿using NKnife.Feature.UutManager.Internal;
 using NLog;
 using RAY.Common.Plugin;
+using RAY.Common.Plugin.Manager;
 using RAY.Plugins.WPF.Common;
 
 namespace NKnife.Feature.UutManager
 {
-    public class UutManagerFeature : BasePicoFeatures
+    public class UutManagerFeature : BasePicoFeatures, ISupportUsingModule
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ModuleContext _moduleContext = new ModuleContext();
@@ -40,6 +41,14 @@ namespace NKnife.Feature.UutManager
 
         /// <inheritdoc />
         public override void Dispose() { }
+        #endregion
+        #region Implementation of ISupportKernel<IModulesManager>
+        /// <inheritdoc />
+        public Task<IPicoPlugin> InjectAsync(Lazy<IModulesManager> moduleManagerLazy)
+        {
+            _moduleContext.SetModulesManager(moduleManagerLazy);
+            return Task.FromResult<IPicoPlugin>(this);
+        }
         #endregion
     }
 }

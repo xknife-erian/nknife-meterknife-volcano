@@ -1,4 +1,4 @@
-﻿using NKnife.Circe.Base.Modules.Service;
+﻿using NKnife.Circe.Base.Modules.Services;
 using NKnife.Module.PreferenceService.Internal;
 using RAY.Common;
 using RAY.Common.Plugin;

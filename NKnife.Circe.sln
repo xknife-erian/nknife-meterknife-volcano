@@ -114,7 +114,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Feature.ConnectorMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.ConnectorManager", "Modules\Managers\NKnife.Module.ConnectorManager\NKnife.Module.ConnectorManager.csproj", "{1EE10707-05B2-4B53-AEAC-27BAA277D458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.DutManager", "Modules\Managers\NKnife.Module.DutManager\NKnife.Module.DutManager.csproj", "{D32083E7-1FCB-46D7-85F6-E513F72DAE67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.UutManager", "Modules\Managers\NKnife.Module.UutManager\NKnife.Module.UutManager.csproj", "{D32083E7-1FCB-46D7-85F6-E513F72DAE67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKnife.Module.ExperimentManager", "Modules\Managers\NKnife.Module.ExperimentManager\NKnife.Module.ExperimentManager.csproj", "{CCB139CE-16D2-4378-9060-1E605A64D003}"
 EndProject
