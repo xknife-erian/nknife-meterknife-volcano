@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
+    <ProjectReference Include="..\..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
   </ItemGroup>
 
   <ItemGroup>

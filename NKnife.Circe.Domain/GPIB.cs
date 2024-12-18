@@ -1,6 +1,6 @@
 ﻿using NKnife.Circe.Base;
 
-namespace NKnife.Circe.Entities
+namespace NKnife.Circe.Domain
 {
     public class GPIB : IConnector
     {

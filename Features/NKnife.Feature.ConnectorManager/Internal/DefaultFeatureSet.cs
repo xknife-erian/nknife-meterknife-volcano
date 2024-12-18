@@ -1,16 +1,13 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
 using NLog;
-using RAY.Common;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
-using RAY.Common.Plugin.Manager;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
-using RAY.Plugins.WPF.Ribbons;
-using System.Windows.Input;
-using RAY.Common.UI;
 
-namespace NKnife.Feature.DutManager.Internal
+namespace NKnife.Feature.ConnectorManager.Internal
 {
     class DefaultFeatureSet() : BaseFeatureSet
     {

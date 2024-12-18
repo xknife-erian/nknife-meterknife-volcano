@@ -2,7 +2,7 @@
 using RAY.Common.Authentication;
 using RAY.Common.Flow;
 
-namespace NKnife.Circe.Entities
+namespace NKnife.Circe.Domain
 {
     public class Experiment : IExperiment
     {

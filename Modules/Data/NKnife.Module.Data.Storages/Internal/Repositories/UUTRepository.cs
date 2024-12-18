@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NKnife.Circe.Entities;
+﻿using NKnife.Circe.Domain;
 
 namespace NKnife.Module.Data.Storages.Internal.Repositories
 {

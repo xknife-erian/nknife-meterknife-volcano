@@ -21,6 +21,7 @@
         <ProjectReference Include="..\..\Mercury\Common\RAY.Windows\RAY.Windows.csproj" />
         <ProjectReference Include="..\..\Mercury\Features\LEIAO.Feature.PluginBrowser\LEIAO.Feature.PluginBrowser.csproj" />
         <ProjectReference Include="..\..\Mercury\Modules\LEIAO.Module.Messenger\LEIAO.Module.Messenger.csproj" />
+        <ProjectReference Include="..\Features\NKnife.Feature.ConnectorManager\NKnife.Feature.ConnectorManager.csproj" />
         <ProjectReference Include="..\Features\NKnife.Feature.ExperimentManager\NKnife.Feature.ExperimentManager.csproj" />
         <ProjectReference Include="..\Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj" />
         <ProjectReference Include="..\Features\NKnife.Feature.LogService\NKnife.Feature.LogService.csproj" />
@@ -42,9 +43,8 @@
         <ProjectReference Include="..\Modules\Services\NKnife.Module.PreferenceService\NKnife.Module.PreferenceService.csproj" />
         <ProjectReference Include="..\Modules\Services\NKnife.Module.WelcomeService\NKnife.Module.WelcomeService.csproj" />
         <ProjectReference Include="..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
-        <ProjectReference Include="..\NKnife.Circe.Entities\NKnife.Circe.Entities.csproj" />
+        <ProjectReference Include="..\NKnife.Circe.Domain\NKnife.Circe.Domain.csproj" />
         <ProjectReference Include="..\NKnife.Circe.Theme\NKnife.Circe.Theme.csproj" />
-        <ProjectReference Include="..\NKnife.Feature.ConnectorManager\NKnife.Feature.ConnectorManager.csproj" />
     </ItemGroup>
 
 </Project>

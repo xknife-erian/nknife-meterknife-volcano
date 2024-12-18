@@ -13,7 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Mercury\Common\RAY.Common\RAY.Common.csproj" />
     <ProjectReference Include="..\..\..\..\Mercury\Common\RAY.Storages\RAY.Storages.csproj" />
-    <ProjectReference Include="..\..\..\NKnife.Circe.Entities\NKnife.Circe.Entities.csproj" />
+    <ProjectReference Include="..\..\..\NKnife.Circe.Domain\NKnife.Circe.Domain.csproj" />
   </ItemGroup>
 
 </Project>

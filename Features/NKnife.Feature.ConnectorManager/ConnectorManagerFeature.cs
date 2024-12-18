@@ -1,9 +1,9 @@
-﻿using NKnife.Feature.DutManager.Internal;
+﻿using NKnife.Feature.ConnectorManager.Internal;
 using NLog;
 using RAY.Common.Plugin;
 using RAY.Plugins.WPF.Common;
 
-namespace NKnife.Feature.DutManager
+namespace NKnife.Feature.ConnectorManager
 {
     public class DutManagerFeature : BasePicoFeatures
     {

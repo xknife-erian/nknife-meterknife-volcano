@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NKnife.Circe.Base;
+﻿using NKnife.Circe.Base;
 
-namespace NKnife.Circe.Entities
+namespace NKnife.Circe.Domain
 {
     /// <summary>
     /// UUT，是unit under test的缩写，意思是被测试单元(模块)。<br/>
