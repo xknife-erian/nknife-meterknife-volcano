@@ -1,11 +1,11 @@
-﻿using NKnife.Feature.DutManager.Internal;
+﻿using NKnife.Feature.UutManager.Internal;
 using NLog;
 using RAY.Common.Plugin;
 using RAY.Plugins.WPF.Common;
 
-namespace NKnife.Feature.DutManager
+namespace NKnife.Feature.UutManager
 {
-    public class DutManagerFeature : BasePicoFeatures
+    public class UutManagerFeature : BasePicoFeatures
     {
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ModuleContext _moduleContext = new ModuleContext();

@@ -1,16 +1,13 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
 using NLog;
-using RAY.Common;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
-using RAY.Common.Plugin.Manager;
+using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
-using RAY.Plugins.WPF.Ribbons;
-using System.Windows.Input;
-using RAY.Common.UI;
 
-namespace NKnife.Feature.DutManager.Internal
+namespace NKnife.Feature.UutManager.Internal
 {
     class DefaultFeatureSet() : BaseFeatureSet
     {
@@ -18,14 +15,14 @@ namespace NKnife.Feature.DutManager.Internal
 
         private IUIManager? _uiManager;
 
-        private ICommand ShowPluginBrowserDialog => new RelayCommand(() =>
+        private ICommand ShowUUTsManagerPane => new RelayCommand(() =>
         {
         });
 
         /// <inheritdoc />
         protected override Dictionary<string, ICommand> RegisterCommandDictionary()
         {
-            var commands = new Dictionary<string, ICommand> { { nameof(ShowPluginBrowserDialog), ShowPluginBrowserDialog } };
+            var commands = new Dictionary<string, ICommand> { { nameof(ShowUUTsManagerPane), ShowUUTsManagerPane } };
             return commands;
         }
 

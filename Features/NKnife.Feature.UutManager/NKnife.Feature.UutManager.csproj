@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NKnife.Feature.DutManager.plugindesc">
+    <None Update="NKnife.Feature.UutManager.plugindesc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

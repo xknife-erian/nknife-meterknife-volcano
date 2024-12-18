@@ -1,6 +1,6 @@
 ﻿using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Feature.DutManager
+namespace NKnife.Feature.UutManager
 {
     class ModuleContext : BaseModuleContext
     {

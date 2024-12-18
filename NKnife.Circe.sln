@@ -80,7 +80,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LEIAO.Module.Messenger", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{97FF4408-6A9C-429A-AFBB-AC2CA21FF913}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.DutManager", "Features\NKnife.Feature.DutManager\NKnife.Feature.DutManager.csproj", "{1F4C7339-9C5A-41FA-BC15-2C67945948B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.UutManager", "Features\NKnife.Feature.UutManager\NKnife.Feature.UutManager.csproj", "{1F4C7339-9C5A-41FA-BC15-2C67945948B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NKnife.Feature.InstrumentManager", "Features\NKnife.Feature.InstrumentManager\NKnife.Feature.InstrumentManager.csproj", "{BF5591DF-D11D-49DA-8EBA-982F77B12CE5}"
 EndProject
