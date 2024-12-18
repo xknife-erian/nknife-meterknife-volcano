@@ -32,14 +32,15 @@
         <ProjectReference Include="..\Modules\Data\NKnife.Module.Data.Repository\NKnife.Module.Data.Repository.csproj" />
         <ProjectReference Include="..\Modules\Data\NKnife.Module.Data.Storages\NKnife.Module.Data.Storages.csproj" />
         <ProjectReference Include="..\Modules\NKnife.Module.Mock\NKnife.Module.Mock.csproj" />
+        <ProjectReference Include="..\Modules\NKnife.Module.Workbench\NKnife.Module.Workbench.csproj" />
         <ProjectReference Include="..\Modules\Services\NKnife.Module.AppWorkspaceService\NKnife.Module.AppWorkspaceService.csproj" />
         <ProjectReference Include="..\Modules\Services\NKnife.Module.LogService\NKnife.Module.LogService.csproj" />
         <ProjectReference Include="..\Modules\Services\NKnife.Module.PreferenceService\NKnife.Module.PreferenceService.csproj" />
         <ProjectReference Include="..\Modules\Services\NKnife.Module.WelcomeService\NKnife.Module.WelcomeService.csproj" />
-        <ProjectReference Include="..\Modules\NKnife.Module.UI.MainWorkbench\NKnife.Module.UI.MainWorkbench.csproj" />
         <ProjectReference Include="..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
         <ProjectReference Include="..\NKnife.Circe.Entities\NKnife.Circe.Entities.csproj" />
         <ProjectReference Include="..\NKnife.Circe.Theme\NKnife.Circe.Theme.csproj" />
+        <ProjectReference Include="..\NKnife.Feature.ConnectorManager\NKnife.Feature.ConnectorManager.csproj" />
     </ItemGroup>
 
 </Project>

@@ -42,7 +42,11 @@ namespace NKnife.Feature.LogService
             {
                 s_logger.Debug("UI：用户打开【日志】");
                 var logService = _logServiceLazy!.Value;
-                _loggerPaneVm ??= new LoggerPaneVm(logService, _uiManager!.ShowDialog);
+                _loggerPaneVm ??= new LoggerPaneVm(logService, _uiManager!.ShowDialog)
+                {
+                    Title = "日志",
+                    ContentId = Guid.NewGuid().ToString()
+                };
                 _uiManager!.ShowDocumentPane(_loggerPaneVm);
             });
 

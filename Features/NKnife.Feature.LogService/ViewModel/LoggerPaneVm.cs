@@ -4,10 +4,11 @@ using MvvmDialogs;
 using NLog;
 using RAY.Common.Services.LogService;
 using RAY.Windows.Common;
+using RAY.Windows.Common.ViewModels.Layout;
 
 namespace NKnife.Feature.LogService.ViewModel
 {
-    public class LoggerPaneVm : BaseViewModel
+    public class LoggerPaneVm : BaseDocumentViewModelV1
     {
         private readonly Action<IModalDialogViewModel, IModalDialogViewModel?> _showDialogAction;
         private double _callerWidth = 220;

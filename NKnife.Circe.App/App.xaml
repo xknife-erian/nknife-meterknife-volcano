@@ -6,7 +6,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Generic.xaml" />
                 <ResourceDictionary Source="/AvalonDock.Themes.VS2013;component/LightBrushs.xaml" />
-                <ResourceDictionary Source="/NKnife.Module.UI.MainWorkbench;component/Internal/View/Themes/Root.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
