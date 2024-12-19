@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Mercury\Common\RAY.Plugins.WPF\RAY.Plugins.WPF.csproj" />
+    <ProjectReference Include="..\..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
   </ItemGroup>
 
   <ItemGroup>

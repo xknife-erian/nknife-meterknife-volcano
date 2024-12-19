@@ -10,18 +10,45 @@
              d:DataContext="{d:DesignInstance {x:Type viewModel:ConnectorManagerViewModel}}">
     <DockPanel>
         <Border DockPanel.Dock="Top">
-            <StackPanel Height="32" Orientation="Horizontal">
+            <StackPanel Height="28" x:Name="_StackPanelToolBar_"
+                        Background="Gainsboro"
+                        Orientation="Horizontal">
                 <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,3,5,3" />
-                        <Setter Property="Padding" Value="12,4" />
+                    <Style x:Key="{x:Type ToolBar}" TargetType="{x:Type ToolBar}">
+                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ToolBar}">
+                                    <Border Background="Transparent">
+                                        <ToolBarPanel IsItemsHost="True"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
                     </Style>
                 </StackPanel.Resources>
-                <Button Content="Add" />
-                <Button Content="Add Group" />
-                <Button Content="Edit" />
-                <Button Content="Delete" />
-                <ua:UIAddinHost AddinHostName="UutManagerToolBar" />
+                <ToolBar VerticalAlignment="Center" Background="Transparent" ToolBarTray.IsLocked="True">
+                    <ToolBar.Resources>
+                        <Style TargetType="Menu" x:Key="ToolMenuStyle">
+                            <Setter Property="Background" Value="{Binding ElementName=_StackPanelToolBar_, Path=Background}"/>
+                        </Style>
+                    </ToolBar.Resources>
+
+                    <Menu Style="{StaticResource ToolMenuStyle}">
+                        <MenuItem Header="新建">
+                            <MenuItem Header="接口" />
+                            <MenuItem Header="接口组" />
+                        </MenuItem>
+                    </Menu>
+                    <Separator/>
+                    <Menu Style="{StaticResource ToolMenuStyle}">
+                        <MenuItem Header="删除">
+                            <MenuItem Header="接口" />
+                            <MenuItem Header="接口组" />
+                        </MenuItem>
+                    </Menu>
+                </ToolBar>
+                <ua:UIAddinHost AddinHostName="UutManagerToolBar" Orientation="Horizontal"/>
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Bottom">
@@ -30,7 +57,24 @@
             </StackPanel>
         </Border>
         <Border>
-            <DataGrid />
+            <ListView x:Name="_ListView_" ItemsSource="{Binding ConnectorCollection}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="{Binding ElementName=_ListView_, Path=ActualWidth}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Image Source="{Binding ImagePath}"
+                                               Width="{Binding ElementName=_ListView_, Path=ActualWidth}"
+                                               Height="{Binding ElementName=_ListView_, Path=ActualWidth}" />
+                                        <TextBlock Text="{Binding Description}" TextAlignment="Center" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </Border>
     </DockPanel>
 </UserControl>
