@@ -7,7 +7,12 @@
         <SatelliteResourceLanguages>en;zh-Hans;zh-Hant</SatelliteResourceLanguages>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <ApplicationIcon>App.ico</ApplicationIcon>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="App.ico" />
+    </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\Mercury\Addins\LEIAO.Addin.PerformanceDetector\LEIAO.Addin.PerformanceDetector.csproj" />
