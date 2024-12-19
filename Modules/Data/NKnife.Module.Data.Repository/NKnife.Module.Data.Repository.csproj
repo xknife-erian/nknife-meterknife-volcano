@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\NKnife.Circe.Entities\NKnife.Circe.Entities.csproj" />
+    <ProjectReference Include="..\..\..\..\Mercury\Common\RAY.Storages\RAY.Storages.csproj" />
+    <ProjectReference Include="..\..\..\NKnife.Circe.Base\NKnife.Circe.Base.csproj" />
+    <ProjectReference Include="..\..\..\NKnife.Circe.Domain\NKnife.Circe.Domain.csproj" />
   </ItemGroup>
 
 </Project>
