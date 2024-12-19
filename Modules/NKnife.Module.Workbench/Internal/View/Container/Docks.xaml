@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:containerVm="clr-namespace:NKnife.Module.Workbench.Internal.ViewModels.Container"
-             xmlns:container="clr-namespace:NKnife.Module.Workbench.Internal.View.Container"
+             xmlns:cr="clr-namespace:NKnife.Module.Workbench.Internal.View.Container"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance {x:Type containerVm:DocksVm}}"
              x:Class="NKnife.Module.Workbench.Internal.View.Container.Docks">
     <UserControl.Resources>
         <BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
-        <container:DocksTemplateSelector x:Key="TemplateSelector" />
+        <cr:DocksTemplateSelector x:Key="TemplateSelector" />
     </UserControl.Resources>
     <Border Background="DimGray">
         <DockingManager x:Name="_DockingManager_"
@@ -20,35 +20,31 @@
                              LayoutItemTemplateSelector="{StaticResource TemplateSelector}">
 
             <DockingManager.LayoutItemContainerStyleSelector>
-                <!-- 这里有一个打破了常见的 WPF 模式的缺陷，是此容器的 DataContext 不是控件打算显示的数据模型，而是控件的内部模型。要访问View模型，
-                需要访问例如LayoutAnchorableControl.LayoutItem.Model(因为 LayoutAnchorableControl.DataContext 是 LayoutAnchorable)。
-                下面 stackoverflow 的链接中的文章中有较详细的阐述-->
-                <!-- https://stackoverflow.com/questions/63645164/binding-an-avalondock-layoutanchorable-isvisible-property -->
-                <container:DocksStyleSelector>
-                    <container:DocksStyleSelector.ToolPanelStyle>
+                <cr:DocksStyleSelector>
+                    <cr:DocksStyleSelector.ToolPanelStyle>
                         <Style TargetType="{x:Type LayoutAnchorableItem}">
                             <Setter Property="Title" Value="{Binding Model.Title}" />
                             <Setter Property="CanHide" Value="{Binding Model.CanHide}" />
                             <Setter Property="ContentId" Value="{Binding Model.ContentId}" />
-                            <Setter Property="Visibility"
-                                    Value="{Binding Model.IsVisible, Converter={StaticResource BoolToVisibilityConverter}, Mode=TwoWay}" />
                             <Setter Property="IsSelected" Value="{Binding Model.IsSelected, Mode=TwoWay}" />
                             <Setter Property="IsActive" Value="{Binding Model.IsActive, Mode=TwoWay}" />
+                            <Setter Property="Visibility"
+                                    Value="{Binding Model.IsVisible, Converter={StaticResource BoolToVisibilityConverter}, Mode=TwoWay}" />
                             <Setter Property="HideCommand" Value="{Binding Model.HideCommand}" />
                         </Style>
-                    </container:DocksStyleSelector.ToolPanelStyle>
-                    <container:DocksStyleSelector.DocumentStyle>
+                    </cr:DocksStyleSelector.ToolPanelStyle>
+                    <cr:DocksStyleSelector.DocumentStyle>
                         <Style TargetType="{x:Type LayoutItem}">
                             <Setter Property="CloseCommand" Value="{Binding Model.CloseCommand}" />
                             <Setter Property="ContentId" Value="{Binding Model.ContentId}" />
                             <Setter Property="Title" Value="{Binding Model.Title}" />
                         </Style>
-                    </container:DocksStyleSelector.DocumentStyle>
-                </container:DocksStyleSelector>
+                    </cr:DocksStyleSelector.DocumentStyle>
+                </cr:DocksStyleSelector>
             </DockingManager.LayoutItemContainerStyleSelector>
 
             <DockingManager.LayoutUpdateStrategy>
-                <container:DockLayoutInitializer />
+                <cr:DockLayoutUpdateStrategy />
             </DockingManager.LayoutUpdateStrategy>
 
             <LayoutRoot>

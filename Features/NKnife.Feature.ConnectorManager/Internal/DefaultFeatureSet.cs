@@ -1,5 +1,7 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using NKnife.Feature.ConnectorManager.Internal.View;
+using NKnife.Feature.ConnectorManager.Internal.ViewModel;
 using NLog;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
@@ -14,15 +16,18 @@ namespace NKnife.Feature.ConnectorManager.Internal
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
 
         private IUIManager? _uiManager;
+        private ConnectorManagerViewModel? _connectorManagerViewModel;
 
-        private ICommand ShowPluginBrowserDialog => new RelayCommand(() =>
+        private ICommand ShowConnectorManagerPane => new RelayCommand(() =>
         {
+            _connectorManagerViewModel ??= new ConnectorManagerViewModel { Title = "连接器管理", ContentId = Guid.NewGuid().ToString() };
+            _uiManager!.ShowToolPane(_connectorManagerViewModel);
         });
 
         /// <inheritdoc />
         protected override Dictionary<string, ICommand> RegisterCommandDictionary()
         {
-            var commands = new Dictionary<string, ICommand> { { nameof(ShowPluginBrowserDialog), ShowPluginBrowserDialog } };
+            var commands = new Dictionary<string, ICommand> { { nameof(ShowConnectorManagerPane), ShowConnectorManagerPane } };
             return commands;
         }
 
@@ -52,7 +57,7 @@ namespace NKnife.Feature.ConnectorManager.Internal
         /// <inheritdoc />
         public override IEnumerable<VmPair> BuildPaneModel()
         {
-            return [];
+            return [new VmPair(View:typeof(ConnectorManagerView), ViewModel:typeof(ConnectorManagerViewModel))];
         }
 
         /// <inheritdoc />

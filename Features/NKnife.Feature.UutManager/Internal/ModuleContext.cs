@@ -1,7 +1,7 @@
 ﻿using NKnife.Circe.Base.Modules.Managers;
 using RAY.Common.Plugin.Modules;
 
-namespace NKnife.Feature.UutManager
+namespace NKnife.Feature.UutManager.Internal
 {
     class ModuleContext : BaseModuleContext
     {

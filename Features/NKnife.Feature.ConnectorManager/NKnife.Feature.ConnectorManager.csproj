@@ -12,6 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Internal\View\ConnectorManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="NKnife.Feature.ConnectorManager.plugindesc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
