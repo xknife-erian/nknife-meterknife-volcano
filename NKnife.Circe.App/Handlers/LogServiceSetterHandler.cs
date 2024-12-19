@@ -2,7 +2,7 @@
 using RAY.Common.NLogConf;
 using RAY.Common.Plugin.Manager;
 using RAY.Common.Services.LogService;
-using RAY.Windows.Common;
+using RAY.Windows;
 
 namespace NKnife.Circe.App.Handlers
 {

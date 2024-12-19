@@ -1,4 +1,4 @@
-﻿using RAY.Windows.Common;
+﻿using RAY.Windows;
 using RAY.Windows.WinApi;
 
 namespace NKnife.Circe.App.Handlers

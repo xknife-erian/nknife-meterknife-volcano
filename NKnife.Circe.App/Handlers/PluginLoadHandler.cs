@@ -3,7 +3,7 @@ using NKnife.Module.Data.Storages;
 using RAY.Common.Plugin.Manager;
 using RAY.Plugins;
 using RAY.Plugins.WPF;
-using RAY.Windows.Common;
+using RAY.Windows;
 
 namespace NKnife.Circe.App.Handlers
 {

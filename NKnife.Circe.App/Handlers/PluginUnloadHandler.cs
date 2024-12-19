@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using RAY.Common.Plugin.Manager;
-using RAY.Windows.Common;
+using RAY.Windows;
 
 namespace NKnife.Circe.App.Handlers
 {

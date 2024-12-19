@@ -1,5 +1,5 @@
-﻿using System.Text;
-using RAY.Windows.Common;
+﻿using RAY.Windows;
+using System.Text;
 
 namespace NKnife.Circe.App.Handlers
 {
