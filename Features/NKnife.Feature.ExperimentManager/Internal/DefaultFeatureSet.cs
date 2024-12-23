@@ -1,5 +1,7 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using NKnife.Feature.ExperimentManager.Internal.View;
+using NKnife.Feature.ExperimentManager.Internal.ViewModel;
 using NLog;
 using RAY.Common;
 using RAY.Common.Authentication;
@@ -17,14 +19,18 @@ namespace NKnife.Feature.ExperimentManager.Internal
 
         private IUIManager? _uiManager;
 
-        private ICommand ShowPluginBrowserDialog => new RelayCommand(() =>
+        private ICommand ShowExperimentManagerWindowVm => new RelayCommand(() =>
         {
+            _uiManager!.ShowDialog(new ExperimentManagerWindowVm()
+            {
+                Title = "实验管理",ContentId = Guid.NewGuid().ToString()
+            });
         });
 
         /// <inheritdoc />
         protected override Dictionary<string, ICommand> RegisterCommandDictionary()
         {
-            var commands = new Dictionary<string, ICommand> { { nameof(ShowPluginBrowserDialog), ShowPluginBrowserDialog } };
+            var commands = new Dictionary<string, ICommand> { { nameof(ShowExperimentManagerWindowVm), ShowExperimentManagerWindowVm } };
             return commands;
         }
 
@@ -60,7 +66,7 @@ namespace NKnife.Feature.ExperimentManager.Internal
         /// <inheritdoc />
         public override IEnumerable<VmPair> BuildDialogModel()
         {
-            return [];
+            return [new VmPair(View: typeof(ExperimentManagerWindow), ViewModel: typeof(ExperimentManagerWindowVm))];
         }
     }
 }
