@@ -1,13 +1,13 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using NKnife.Feature.InstrumentManager.Internal.View;
+using NKnife.Feature.InstrumentManager.Internal.ViewModel;
 using NLog;
-using RAY.Common;
 using RAY.Common.Authentication;
 using RAY.Common.Enums;
 using RAY.Common.UI;
 using RAY.Library;
 using RAY.Plugins.WPF.Common;
-using RAY.Plugins.WPF.Ribbons;
 
 namespace NKnife.Feature.InstrumentManager.Internal
 {
@@ -16,15 +16,18 @@ namespace NKnife.Feature.InstrumentManager.Internal
         private static readonly ILogger s_logger = LogManager.GetCurrentClassLogger();
 
         private IUIManager? _uiManager;
+        private InstrumentManagerViewModel? _instrumentManagerViewModel;
 
-        private ICommand ShowPluginBrowserDialog => new RelayCommand(() =>
+        private ICommand ShowInstrumentManagerPane => new RelayCommand(() =>
         {
+            _instrumentManagerViewModel ??= new InstrumentManagerViewModel { Title = "仪器管理", ContentId = Guid.NewGuid().ToString() };
+            _uiManager!.ShowToolPane(_instrumentManagerViewModel);
         });
 
         /// <inheritdoc />
         protected override Dictionary<string, ICommand> RegisterCommandDictionary()
         {
-            var commands = new Dictionary<string, ICommand> { { nameof(ShowPluginBrowserDialog), ShowPluginBrowserDialog } };
+            var commands = new Dictionary<string, ICommand> { { nameof(ShowInstrumentManagerPane), ShowInstrumentManagerPane } };
             return commands;
         }
 
@@ -54,7 +57,7 @@ namespace NKnife.Feature.InstrumentManager.Internal
         /// <inheritdoc />
         public override IEnumerable<VmPair> BuildPaneModel()
         {
-            return [];
+            return [new VmPair(View:typeof(InstrumentManagerView), ViewModel:typeof(InstrumentManagerViewModel))];
         }
 
         /// <inheritdoc />

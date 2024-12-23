@@ -1,13 +1,15 @@
-﻿<UserControl x:Class="NKnife.Feature.ConnectorManager.Internal.View.ConnectorManagerView"
+﻿<UserControl x:Class="NKnife.Feature.InstrumentManager.Internal.View.InstrumentManagerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ua="clr-namespace:RAY.Plugins.WPF.UIAddins;assembly=RAY.Plugins.WPF"
-             xmlns:viewModel="clr-namespace:NKnife.Feature.ConnectorManager.Internal.ViewModel"
+             xmlns:viewModel="clr-namespace:NKnife.Feature.InstrumentManager.Internal.ViewModel"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="400"
-             d:DataContext="{d:DesignInstance {x:Type viewModel:ConnectorManagerViewModel}}">
+             d:DataContext="{d:DesignInstance {x:Type viewModel:InstrumentManagerViewModel}}">
+    <UserControl.Resources>
+    </UserControl.Resources>
     <DockPanel>
         <Border DockPanel.Dock="Top">
             <StackPanel Height="28" x:Name="_StackPanelToolBar_"
@@ -36,19 +38,19 @@
 
                     <Menu Style="{StaticResource ToolMenuStyle}">
                         <MenuItem Header="新建">
-                            <MenuItem Header="接口" />
-                            <MenuItem Header="接口组" />
+                            <MenuItem Header="仪器" />
+                            <MenuItem Header="仪器组" />
                         </MenuItem>
                     </Menu>
-                    <Separator/>
+                    <Separator />
                     <Menu Style="{StaticResource ToolMenuStyle}">
                         <MenuItem Header="删除">
-                            <MenuItem Header="接口" />
-                            <MenuItem Header="接口组" />
+                            <MenuItem Header="仪器" />
+                            <MenuItem Header="仪器组" />
                         </MenuItem>
                     </Menu>
                 </ToolBar>
-                <ua:UIAddinHost AddinHostName="UutManagerToolBar" Orientation="Horizontal"/>
+                <ua:UIAddinHost AddinHostName="UutManagerToolBar" Orientation="Horizontal" />
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Bottom" Background="Gainsboro">
@@ -59,7 +61,7 @@
         <Border Padding="2">
             <ScrollViewer>
                 <WrapPanel x:Name="_WrapPanel_">
-                    <ItemsControl ItemsSource="{Binding ConnectorCollection}"
+                    <ItemsControl ItemsSource="{Binding InstrumentCollection}"
                                   ScrollViewer.VerticalScrollBarVisibility="Auto">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>

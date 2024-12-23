@@ -12,6 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Internal\View\InstrumentManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="NKnife.Feature.InstrumentManager.plugindesc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -1,43 +1,39 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using NKnife.Circe.Base;
 using RAY.Windows.Common.ViewModels.Layout;
 
-namespace NKnife.Feature.ConnectorManager.Internal.ViewModel
+namespace NKnife.Feature.InstrumentManager.Internal.ViewModel
 {
-    class ConnectorManagerViewModel : BaseToolPaneViewModelV1
+    class InstrumentManagerViewModel : BaseToolPaneViewModelV1
     {
-        public ConnectorManagerViewModel()
+        public InstrumentManagerViewModel()
         {
-            ConnectorCollection =
+            InstrumentCollection =
             [
-                new ConnectorInfo()
+                new InstrumentInfo()
                 {
                     Id          = Guid.NewGuid(),
-                    Description = "NI GPIB-USB-HS",
-                    ImagePath   = "Y:\\Circe\\NI GPIB-USB-HS.jpg"
+                    Description = "Agilent 34401",
+                    ImagePath   = "Y:\\Circe\\Agilent 34401.jpg"
                 },
-
-                new ConnectorInfo()
+                new InstrumentInfo()
                 {
                     Id          = Guid.NewGuid(),
-                    Description = "TCP/IP",
-                    ImagePath   = "Y:\\Circe\\RJ45.jpg"
+                    Description = "Keithley DMM6500",
+                    ImagePath   = "Y:\\Circe\\Keithley DMM6500.jpg"
                 },
-
-                new ConnectorInfo()
+                new InstrumentInfo()
                 {
                     Id          = Guid.NewGuid(),
-                    Description = "Serial Port",
-                    ImagePath   = "Y:\\Circe\\SerialPort.jpg"
+                    Description = "Keysight 34461A",
+                    ImagePath   = "Y:\\Circe\\Keysight 34461A.jpg"
                 },
-
             ];
         }
-        public ObservableCollection<ConnectorInfo> ConnectorCollection { get; set; }= new();
+        public ObservableCollection<InstrumentInfo> InstrumentCollection { get; set; }= new();
     }
 
-    public class ConnectorInfo : ObservableObject
+    public class InstrumentInfo : ObservableObject
     {
         public Guid Id
         {
